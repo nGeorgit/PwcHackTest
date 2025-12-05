@@ -15,8 +15,8 @@ PAGE_CONFIG = {
 # Use environment variables if available, otherwise fallback to defaults
 DEFAULT_LAT = float(os.getenv("DEFAULT_LAT", 40.6401))
 DEFAULT_LON = float(os.getenv("DEFAULT_LON", 22.9444))
-RESCUER_LAT = float(os.getenv("RESCUER_LAT", 40.6350))
-RESCUER_LON = float(os.getenv("RESCUER_LON", 22.9400))
+RESCUER_LAT = float(os.getenv("RESCUER_LAT", 38.0417850)) 
+RESCUER_LON = float(os.getenv("RESCUER_LON", 23.995306))
 
 # Custom CSS
 CUSTOM_CSS = """

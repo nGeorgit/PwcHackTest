@@ -24,9 +24,10 @@ render_header()
 # Data Loading & Processing
 # Using cache_data decorator on a wrapper function or using session state is common.
 # Since DataManager is static, we can wrap the call to use streamlit's cache.
+#I have set some cortnates of mati [38.049498421610664, 23.98779210235504]
 @st.cache_data
 def get_data():
-    return DataManager.load_vulnerable_citizens()
+    return DataManager.load_vulnerable_citizens(center_lat=38.049498421610664, center_lon=23.98779210235504)
 
 raw_data = get_data()
 processed_data = calculate_urgency_score(raw_data, fire_sim_lat, fire_sim_lon)

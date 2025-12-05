@@ -1,0 +1,3752 @@
+[
+  {
+    "id": 1,
+    "fullname": "Φωτεινή Πολίτη",
+    "coordinates": {
+      "lat": 38.049351,
+      "lon": 23.990349
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται άμεση ιατρική υποστήριξη. Απαιτούνται δύο διασώστες",
+    "present": 0,
+    "distance_from_danger": 747,
+    "danger_level": 70
+  },
+  {
+    "id": 2,
+    "fullname": "Ελπίδα Μάνου",
+    "coordinates": {
+      "lat": 38.042694,
+      "lon": 23.976667
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1880,
+    "danger_level": 24
+  },
+  {
+    "id": 3,
+    "fullname": "Μαρία Ρούσσος",
+    "coordinates": {
+      "lat": 38.029278,
+      "lon": 23.993722
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 1335,
+    "danger_level": 46
+  },
+  {
+    "id": 4,
+    "fullname": "Νίκος Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.064222,
+      "lon": 23.972194
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 1571,
+    "danger_level": 37
+  },
+  {
+    "id": 5,
+    "fullname": "Άννα Πολίτη",
+    "coordinates": {
+      "lat": 38.05518,
+      "lon": 23.99009
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1379,
+    "danger_level": 44
+  },
+  {
+    "id": 6,
+    "fullname": "Κατερίνα Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.05501,
+      "lon": 23.981357
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 694,
+    "danger_level": 72
+  },
+  {
+    "id": 7,
+    "fullname": "Άννα Τσιλιγγίρης",
+    "coordinates": {
+      "lat": 38.0287,
+      "lon": 23.95472
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1569,
+    "danger_level": 37
+  },
+  {
+    "id": 8,
+    "fullname": "Αγγελική Τσεκούρας",
+    "coordinates": {
+      "lat": 38.041846,
+      "lon": 23.972703
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 2184,
+    "danger_level": 12
+  },
+  {
+    "id": 9,
+    "fullname": "Κατερίνα Στρατή",
+    "coordinates": {
+      "lat": 38.034986,
+      "lon": 23.988467
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται υποστήριξη από μηχάνημα. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 2396,
+    "danger_level": 4
+  },
+  {
+    "id": 10,
+    "fullname": "Ελένη Ρούσσος",
+    "coordinates": {
+      "lat": 38.060017,
+      "lon": 23.974452
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια κώφωση. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1000,
+    "danger_level": 60
+  },
+  {
+    "id": 11,
+    "fullname": "Θανάσης Μάνου",
+    "coordinates": {
+      "lat": 38.034602,
+      "lon": 23.991923
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά αναπηρία. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 0,
+    "distance_from_danger": 1032,
+    "danger_level": 58
+  },
+  {
+    "id": 12,
+    "fullname": "Αγγελική Μάνου",
+    "coordinates": {
+      "lat": 38.031865,
+      "lon": 23.98795
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 1079,
+    "danger_level": 56
+  },
+  {
+    "id": 13,
+    "fullname": "Νίκος Στεργίου",
+    "coordinates": {
+      "lat": 38.040316,
+      "lon": 23.980686
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 1240,
+    "danger_level": 50
+  },
+  {
+    "id": 14,
+    "fullname": "Χρήστος Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.025106,
+      "lon": 23.959783
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται άμεση ιατρική υποστήριξη. Απαιτούνται δύο διασώστες",
+    "present": 1,
+    "distance_from_danger": 2407,
+    "danger_level": 3
+  },
+  {
+    "id": 15,
+    "fullname": "Γιώργος Ιωαννίδης",
+    "coordinates": {
+      "lat": 38.034562,
+      "lon": 23.955848
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά επιληψία. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 0,
+    "distance_from_danger": 976,
+    "danger_level": 60
+  },
+  {
+    "id": 16,
+    "fullname": "Μιχάλης Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.043147,
+      "lon": 23.971466
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια αναπηρία. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 0,
+    "distance_from_danger": 776,
+    "danger_level": 68
+  },
+  {
+    "id": 17,
+    "fullname": "Νίκος Μάνου",
+    "coordinates": {
+      "lat": 38.031958,
+      "lon": 23.989104
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια κώφωση. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 1624,
+    "danger_level": 35
+  },
+  {
+    "id": 18,
+    "fullname": "Κατερίνα Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.065205,
+      "lon": 23.977011
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 611,
+    "danger_level": 75
+  },
+  {
+    "id": 19,
+    "fullname": "Βασιλική Ιωαννίδης",
+    "coordinates": {
+      "lat": 38.059012,
+      "lon": 23.99232
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 1425,
+    "danger_level": 43
+  },
+  {
+    "id": 20,
+    "fullname": "Κωνσταντίνα Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.051504,
+      "lon": 23.992104
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια τύφλωση. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 940,
+    "danger_level": 62
+  },
+  {
+    "id": 21,
+    "fullname": "Δημήτρης Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.026001,
+      "lon": 23.954637
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1101,
+    "danger_level": 55
+  },
+  {
+    "id": 22,
+    "fullname": "Χρήστος Μάνου",
+    "coordinates": {
+      "lat": 38.049463,
+      "lon": 23.987136
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 2109,
+    "danger_level": 15
+  },
+  {
+    "id": 23,
+    "fullname": "Αναστάσιος Παπακώστας",
+    "coordinates": {
+      "lat": 38.065534,
+      "lon": 23.976174
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια επιληψία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 830,
+    "danger_level": 66
+  },
+  {
+    "id": 24,
+    "fullname": "Αγγελική Ρούσσος",
+    "coordinates": {
+      "lat": 38.02486,
+      "lon": 23.952457
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 1856,
+    "danger_level": 25
+  },
+  {
+    "id": 25,
+    "fullname": "Μαρία Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.054418,
+      "lon": 23.985328
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 1518,
+    "danger_level": 39
+  },
+  {
+    "id": 26,
+    "fullname": "Σοφία Στεργίου",
+    "coordinates": {
+      "lat": 38.058132,
+      "lon": 23.979846
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια αναπηρία. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 1667,
+    "danger_level": 33
+  },
+  {
+    "id": 27,
+    "fullname": "Κατερίνα Κωνσταντίνου",
+    "coordinates": {
+      "lat": 38.049807,
+      "lon": 23.986369
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια τύφλωση. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 447,
+    "danger_level": 82
+  },
+  {
+    "id": 28,
+    "fullname": "Βασιλική Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.027428,
+      "lon": 23.987866
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 711,
+    "danger_level": 71
+  },
+  {
+    "id": 29,
+    "fullname": "Θανάσης Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.060574,
+      "lon": 23.970273
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια επιληψία. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1369,
+    "danger_level": 45
+  },
+  {
+    "id": 30,
+    "fullname": "Θανάσης Κωνσταντίνου",
+    "coordinates": {
+      "lat": 38.060385,
+      "lon": 23.986906
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια τύφλωση. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 2243,
+    "danger_level": 10
+  },
+  {
+    "id": 31,
+    "fullname": "Φωτεινή Τσιλιγγίρης",
+    "coordinates": {
+      "lat": 38.05863,
+      "lon": 23.98283
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια τύφλωση. Απαιτούνται δύο διασώστες",
+    "present": 1,
+    "distance_from_danger": 758,
+    "danger_level": 69
+  },
+  {
+    "id": 32,
+    "fullname": "Χρήστος Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.053603,
+      "lon": 23.991592
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 457,
+    "danger_level": 81
+  },
+  {
+    "id": 33,
+    "fullname": "Μαρία Μάνου",
+    "coordinates": {
+      "lat": 38.033665,
+      "lon": 23.95639
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά αναπνευστικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 2274,
+    "danger_level": 9
+  },
+  {
+    "id": 34,
+    "fullname": "Άννα Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.045551,
+      "lon": 23.988916
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά άνοια. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1424,
+    "danger_level": 43
+  },
+  {
+    "id": 35,
+    "fullname": "Αγγελική Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.031552,
+      "lon": 23.994478
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 529,
+    "danger_level": 78
+  },
+  {
+    "id": 36,
+    "fullname": "Γιώργος Μάνου",
+    "coordinates": {
+      "lat": 38.059087,
+      "lon": 23.9691
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται άμεση ιατρική υποστήριξη. Απαιτούνται δύο διασώστες",
+    "present": 0,
+    "distance_from_danger": 732,
+    "danger_level": 70
+  },
+  {
+    "id": 37,
+    "fullname": "Φωτεινή Μπεκιάρης",
+    "coordinates": {
+      "lat": 38.068163,
+      "lon": 23.973354
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Απαιτούνται δύο διασώστες",
+    "present": 0,
+    "distance_from_danger": 807,
+    "danger_level": 67
+  },
+  {
+    "id": 38,
+    "fullname": "Θανάσης Ρούσσος",
+    "coordinates": {
+      "lat": 38.043766,
+      "lon": 23.988027
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά καρδιολογικά προβλήματα. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 594,
+    "danger_level": 76
+  },
+  {
+    "id": 39,
+    "fullname": "Κωνσταντίνα Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.048591,
+      "lon": 23.977699
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά άνοια. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 1555,
+    "danger_level": 37
+  },
+  {
+    "id": 40,
+    "fullname": "Φωτεινή Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.028368,
+      "lon": 23.958295
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια κώφωση. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 2314,
+    "danger_level": 7
+  },
+  {
+    "id": 41,
+    "fullname": "Γιώργος Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.054082,
+      "lon": 23.985427
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1061,
+    "danger_level": 57
+  },
+  {
+    "id": 42,
+    "fullname": "Αγγελική Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.048341,
+      "lon": 23.977962
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 811,
+    "danger_level": 67
+  },
+  {
+    "id": 43,
+    "fullname": "Άννα Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.045884,
+      "lon": 23.994298
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 1706,
+    "danger_level": 31
+  },
+  {
+    "id": 44,
+    "fullname": "Σοφία Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.060497,
+      "lon": 23.992096
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 640,
+    "danger_level": 74
+  },
+  {
+    "id": 45,
+    "fullname": "Γιώργος Ρούσσος",
+    "coordinates": {
+      "lat": 38.038499,
+      "lon": 23.981037
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται άμεση ιατρική υποστήριξη. Απαιτούνται δύο διασώστες",
+    "present": 1,
+    "distance_from_danger": 2305,
+    "danger_level": 7
+  },
+  {
+    "id": 46,
+    "fullname": "Μαρία Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.055251,
+      "lon": 23.978252
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια σοβαρή αρθρίτιδα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 2375,
+    "danger_level": 5
+  },
+  {
+    "id": 47,
+    "fullname": "Φωτεινή Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.06008,
+      "lon": 23.977238
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 2397,
+    "danger_level": 4
+  },
+  {
+    "id": 48,
+    "fullname": "Σοφία Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.066718,
+      "lon": 23.971887
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 2184,
+    "danger_level": 12
+  },
+  {
+    "id": 49,
+    "fullname": "Αναστάσιος Τσεκούρας",
+    "coordinates": {
+      "lat": 38.028537,
+      "lon": 23.955161
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 1980,
+    "danger_level": 20
+  },
+  {
+    "id": 50,
+    "fullname": "Δημήτρης Μπεκιάρης",
+    "coordinates": {
+      "lat": 38.068855,
+      "lon": 23.969379
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια κώφωση. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1025,
+    "danger_level": 59
+  },
+  {
+    "id": 51,
+    "fullname": "Ελπίδα Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.025225,
+      "lon": 23.99936
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια αναπηρία. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 2348,
+    "danger_level": 6
+  },
+  {
+    "id": 52,
+    "fullname": "Χρήστος Στρατή",
+    "coordinates": {
+      "lat": 38.037894,
+      "lon": 23.980657
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά αναπηρία. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 1134,
+    "danger_level": 54
+  },
+  {
+    "id": 53,
+    "fullname": "Χρήστος Πολίτη",
+    "coordinates": {
+      "lat": 38.02933,
+      "lon": 23.992126
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται άμεση ιατρική υποστήριξη. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 2397,
+    "danger_level": 4
+  },
+  {
+    "id": 54,
+    "fullname": "Αναστάσιος Στρατή",
+    "coordinates": {
+      "lat": 38.025824,
+      "lon": 23.948735
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά αναπνευστικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 2238,
+    "danger_level": 10
+  },
+  {
+    "id": 55,
+    "fullname": "Νίκος Σαμαρά",
+    "coordinates": {
+      "lat": 38.056243,
+      "lon": 23.979554
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά καρδιολογικά προβλήματα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 558,
+    "danger_level": 77
+  },
+  {
+    "id": 56,
+    "fullname": "Ελένη Σαμαρά",
+    "coordinates": {
+      "lat": 38.055865,
+      "lon": 23.981456
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια τύφλωση. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1405,
+    "danger_level": 43
+  },
+  {
+    "id": 57,
+    "fullname": "Σοφία Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.060776,
+      "lon": 23.97676
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 2053,
+    "danger_level": 17
+  },
+  {
+    "id": 58,
+    "fullname": "Μαρία Τσιλιγγίρης",
+    "coordinates": {
+      "lat": 38.052566,
+      "lon": 23.993933
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 2272,
+    "danger_level": 9
+  },
+  {
+    "id": 59,
+    "fullname": "Μιχάλης Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.037609,
+      "lon": 23.978397
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 673,
+    "danger_level": 73
+  },
+  {
+    "id": 60,
+    "fullname": "Αναστάσιος Ρούσσος",
+    "coordinates": {
+      "lat": 38.061182,
+      "lon": 23.97357
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1064,
+    "danger_level": 57
+  },
+  {
+    "id": 61,
+    "fullname": "Κατερίνα Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.027297,
+      "lon": 23.958705
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια σοβαρή αρθρίτιδα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 1849,
+    "danger_level": 26
+  },
+  {
+    "id": 62,
+    "fullname": "Μιχάλης Ρούσσος",
+    "coordinates": {
+      "lat": 38.03996,
+      "lon": 23.977014
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 1020,
+    "danger_level": 59
+  },
+  {
+    "id": 63,
+    "fullname": "Κωνσταντίνα Ρούσσος",
+    "coordinates": {
+      "lat": 38.052884,
+      "lon": 23.975875
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά αναπηρία. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 0,
+    "distance_from_danger": 1827,
+    "danger_level": 26
+  },
+  {
+    "id": 64,
+    "fullname": "Δημήτρης Μπεκιάρης",
+    "coordinates": {
+      "lat": 38.058569,
+      "lon": 23.989096
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια τύφλωση. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 2016,
+    "danger_level": 19
+  },
+  {
+    "id": 65,
+    "fullname": "Πέτρος Μακρή",
+    "coordinates": {
+      "lat": 38.058335,
+      "lon": 23.976599
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 1552,
+    "danger_level": 37
+  },
+  {
+    "id": 66,
+    "fullname": "Χρήστος Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.067859,
+      "lon": 23.97383
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια τύφλωση. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1496,
+    "danger_level": 40
+  },
+  {
+    "id": 67,
+    "fullname": "Δημήτρης Βασιλείου",
+    "coordinates": {
+      "lat": 38.069143,
+      "lon": 23.971676
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 770,
+    "danger_level": 69
+  },
+  {
+    "id": 68,
+    "fullname": "Ελένη Στεργίου",
+    "coordinates": {
+      "lat": 38.061391,
+      "lon": 23.968662
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 554,
+    "danger_level": 77
+  },
+  {
+    "id": 69,
+    "fullname": "Γιώργος Στρατή",
+    "coordinates": {
+      "lat": 38.049045,
+      "lon": 23.995028
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1091,
+    "danger_level": 56
+  },
+  {
+    "id": 70,
+    "fullname": "Χρήστος Μακρή",
+    "coordinates": {
+      "lat": 38.064934,
+      "lon": 23.975647
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια σοβαρή αρθρίτιδα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 879,
+    "danger_level": 64
+  },
+  {
+    "id": 71,
+    "fullname": "Μαρία Ιωαννίδης",
+    "coordinates": {
+      "lat": 38.032954,
+      "lon": 23.953654
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1494,
+    "danger_level": 40
+  },
+  {
+    "id": 72,
+    "fullname": "Κατερίνα Μακρή",
+    "coordinates": {
+      "lat": 38.024279,
+      "lon": 23.9906
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια κώφωση. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 0,
+    "distance_from_danger": 666,
+    "danger_level": 73
+  },
+  {
+    "id": 73,
+    "fullname": "Ελένη Μπεκιάρης",
+    "coordinates": {
+      "lat": 38.044363,
+      "lon": 23.972657
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται άμεση ιατρική υποστήριξη. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 997,
+    "danger_level": 60
+  },
+  {
+    "id": 74,
+    "fullname": "Ελπίδα Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.058808,
+      "lon": 23.97266
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 945,
+    "danger_level": 62
+  },
+  {
+    "id": 75,
+    "fullname": "Κατερίνα Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.060811,
+      "lon": 23.990446
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 758,
+    "danger_level": 69
+  },
+  {
+    "id": 76,
+    "fullname": "Γιώργος Πολίτη",
+    "coordinates": {
+      "lat": 38.04159,
+      "lon": 23.977801
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια επιληψία. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 2360,
+    "danger_level": 5
+  },
+  {
+    "id": 77,
+    "fullname": "Άννα Μακρή",
+    "coordinates": {
+      "lat": 38.050599,
+      "lon": 23.985385
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά επιληψία. Χρειάζεται υποστήριξη από μηχάνημα. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1515,
+    "danger_level": 39
+  },
+  {
+    "id": 78,
+    "fullname": "Πέτρος Στρατή",
+    "coordinates": {
+      "lat": 38.030977,
+      "lon": 23.956724
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 664,
+    "danger_level": 73
+  },
+  {
+    "id": 79,
+    "fullname": "Κατερίνα Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.050511,
+      "lon": 23.995848
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά αναπνευστικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Απαιτούνται δύο διασώστες",
+    "present": 0,
+    "distance_from_danger": 1281,
+    "danger_level": 48
+  },
+  {
+    "id": 80,
+    "fullname": "Γιώργος Μάνου",
+    "coordinates": {
+      "lat": 38.040464,
+      "lon": 23.97591
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 938,
+    "danger_level": 62
+  },
+  {
+    "id": 81,
+    "fullname": "Άννα Σαμαρά",
+    "coordinates": {
+      "lat": 38.058645,
+      "lon": 23.991026
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 441,
+    "danger_level": 82
+  },
+  {
+    "id": 82,
+    "fullname": "Μιχάλης Σαμαρά",
+    "coordinates": {
+      "lat": 38.025155,
+      "lon": 23.959205
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια κώφωση. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 1252,
+    "danger_level": 49
+  },
+  {
+    "id": 83,
+    "fullname": "Αναστάσιος Μακρή",
+    "coordinates": {
+      "lat": 38.023904,
+      "lon": 23.987838
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια τύφλωση. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1009,
+    "danger_level": 59
+  },
+  {
+    "id": 84,
+    "fullname": "Γιώργος Μακρή",
+    "coordinates": {
+      "lat": 38.055129,
+      "lon": 23.98565
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 2456,
+    "danger_level": 1
+  },
+  {
+    "id": 85,
+    "fullname": "Θανάσης Στεργίου",
+    "coordinates": {
+      "lat": 38.023583,
+      "lon": 23.987901
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 496,
+    "danger_level": 80
+  },
+  {
+    "id": 86,
+    "fullname": "Δημήτρης Ιωαννίδης",
+    "coordinates": {
+      "lat": 38.023838,
+      "lon": 23.956429
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1155,
+    "danger_level": 53
+  },
+  {
+    "id": 87,
+    "fullname": "Χρήστος Τσιλιγγίρης",
+    "coordinates": {
+      "lat": 38.0532,
+      "lon": 23.987635
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια κώφωση. Απαιτούνται δύο διασώστες",
+    "present": 0,
+    "distance_from_danger": 1773,
+    "danger_level": 29
+  },
+  {
+    "id": 88,
+    "fullname": "Βασιλική Πολίτη",
+    "coordinates": {
+      "lat": 38.060964,
+      "lon": 23.988816
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά καρδιολογικά προβλήματα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1561,
+    "danger_level": 37
+  },
+  {
+    "id": 89,
+    "fullname": "Κατερίνα Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.043661,
+      "lon": 23.970796
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια κώφωση. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 1448,
+    "danger_level": 42
+  },
+  {
+    "id": 90,
+    "fullname": "Θανάσης Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.029039,
+      "lon": 23.994797
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια σοβαρή αρθρίτιδα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 793,
+    "danger_level": 68
+  },
+  {
+    "id": 91,
+    "fullname": "Ελπίδα Σαμαρά",
+    "coordinates": {
+      "lat": 38.056887,
+      "lon": 23.994491
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 2,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 1939,
+    "danger_level": 22
+  },
+  {
+    "id": 92,
+    "fullname": "Μαρία Σαμαρά",
+    "coordinates": {
+      "lat": 38.027645,
+      "lon": 23.959029
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά άνοια. Χρειάζεται υποστήριξη από μηχάνημα. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 487,
+    "danger_level": 80
+  },
+  {
+    "id": 93,
+    "fullname": "Νίκος Μάνου",
+    "coordinates": {
+      "lat": 38.052294,
+      "lon": 23.976754
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 2197,
+    "danger_level": 12
+  },
+  {
+    "id": 94,
+    "fullname": "Ελπίδα Τσεκούρας",
+    "coordinates": {
+      "lat": 38.060367,
+      "lon": 23.992492
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά επιληψία. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1569,
+    "danger_level": 37
+  },
+  {
+    "id": 95,
+    "fullname": "Νίκος Πολίτη",
+    "coordinates": {
+      "lat": 38.049385,
+      "lon": 23.976273
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά άνοια. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1461,
+    "danger_level": 41
+  },
+  {
+    "id": 96,
+    "fullname": "Αλέξανδρος Μακρή",
+    "coordinates": {
+      "lat": 38.052799,
+      "lon": 23.991815
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1252,
+    "danger_level": 49
+  },
+  {
+    "id": 97,
+    "fullname": "Ελένη Μπεκιάρης",
+    "coordinates": {
+      "lat": 38.049724,
+      "lon": 23.987632
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 661,
+    "danger_level": 73
+  },
+  {
+    "id": 98,
+    "fullname": "Θανάσης Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.068955,
+      "lon": 23.968932
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 1621,
+    "danger_level": 35
+  },
+  {
+    "id": 99,
+    "fullname": "Πέτρος Τσεκούρας",
+    "coordinates": {
+      "lat": 38.068948,
+      "lon": 23.97376
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1190,
+    "danger_level": 52
+  },
+  {
+    "id": 100,
+    "fullname": "Φωτεινή Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.059747,
+      "lon": 23.984106
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά καρδιολογικά προβλήματα. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1362,
+    "danger_level": 45
+  },
+  {
+    "id": 101,
+    "fullname": "Κατερίνα Κωνσταντίνου",
+    "coordinates": {
+      "lat": 38.0505329305471,
+      "lon": 23.9867872895551
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια τύφλωση. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 540,
+    "danger_level": 78
+  },
+  {
+    "id": 102,
+    "fullname": "Δημήτρης Ιωαννίδης",
+    "coordinates": {
+      "lat": 38.02293094380567,
+      "lon": 23.956613553608236
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1231,
+    "danger_level": 50
+  },
+  {
+    "id": 103,
+    "fullname": "Αναστάσιος Ρούσσος",
+    "coordinates": {
+      "lat": 38.06069569660802,
+      "lon": 23.974017464841257
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1159,
+    "danger_level": 53
+  },
+  {
+    "id": 104,
+    "fullname": "Γιώργος Πολίτη",
+    "coordinates": {
+      "lat": 38.04206011150058,
+      "lon": 23.9777382987671
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια επιληψία. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 2141,
+    "danger_level": 14
+  },
+  {
+    "id": 105,
+    "fullname": "Δημήτρης Μπεκιάρης",
+    "coordinates": {
+      "lat": 38.05840109171832,
+      "lon": 23.98912538042551
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια τύφλωση. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 2019,
+    "danger_level": 19
+  },
+  {
+    "id": 106,
+    "fullname": "Γιώργος Μάνου",
+    "coordinates": {
+      "lat": 38.040243349448964,
+      "lon": 23.97667252903942
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 1054,
+    "danger_level": 57
+  },
+  {
+    "id": 107,
+    "fullname": "Αλέξανδρος Μακρή",
+    "coordinates": {
+      "lat": 38.0529198903947,
+      "lon": 23.99221172981971
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 973,
+    "danger_level": 61
+  },
+  {
+    "id": 108,
+    "fullname": "Φωτεινή Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.06070771328605,
+      "lon": 23.977316571458136
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 2217,
+    "danger_level": 11
+  },
+  {
+    "id": 109,
+    "fullname": "Άννα Τσιλιγγίρης",
+    "coordinates": {
+      "lat": 38.02954544487661,
+      "lon": 23.954748928254304
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1593,
+    "danger_level": 36
+  },
+  {
+    "id": 110,
+    "fullname": "Κατερίνα Στρατή",
+    "coordinates": {
+      "lat": 38.03426138659968,
+      "lon": 23.98885422720635
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται υποστήριξη από μηχάνημα. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 0,
+    "distance_from_danger": 2621,
+    "danger_level": 0
+  },
+  {
+    "id": 111,
+    "fullname": "Θανάσης Μάνου",
+    "coordinates": {
+      "lat": 38.035261599644244,
+      "lon": 23.991042867184934
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά αναπηρία. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 1026,
+    "danger_level": 58
+  },
+  {
+    "id": 112,
+    "fullname": "Βασιλική Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.02651636799564,
+      "lon": 23.987528913159014
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 717,
+    "danger_level": 71
+  },
+  {
+    "id": 113,
+    "fullname": "Κατερίνα Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.05454043947225,
+      "lon": 23.98089999463728
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 839,
+    "danger_level": 66
+  },
+  {
+    "id": 114,
+    "fullname": "Πέτρος Στρατή",
+    "coordinates": {
+      "lat": 38.03065731399336,
+      "lon": 23.9563501203949
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 574,
+    "danger_level": 77
+  },
+  {
+    "id": 115,
+    "fullname": "Φωτεινή Πολίτη",
+    "coordinates": {
+      "lat": 38.0496623285347,
+      "lon": 23.991032864966833
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται άμεση ιατρική υποστήριξη. Απαιτούνται δύο διασώστες",
+    "present": 1,
+    "distance_from_danger": 832,
+    "danger_level": 66
+  },
+  {
+    "id": 116,
+    "fullname": "Γιώργος Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.0544830750663,
+      "lon": 23.985679656772653
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1062,
+    "danger_level": 57
+  },
+  {
+    "id": 117,
+    "fullname": "Θανάσης Κωνσταντίνου",
+    "coordinates": {
+      "lat": 38.059793216337425,
+      "lon": 23.98745218073574
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια τύφλωση. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 2438,
+    "danger_level": 2
+  },
+  {
+    "id": 118,
+    "fullname": "Χρήστος Τσιλιγγίρης",
+    "coordinates": {
+      "lat": 38.054189521484524,
+      "lon": 23.986646448892756
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Απαιτούνται δύο διασώστες",
+    "present": 1,
+    "distance_from_danger": 1711,
+    "danger_level": 31
+  },
+  {
+    "id": 119,
+    "fullname": "Φωτεινή Τσιλιγγίρης",
+    "coordinates": {
+      "lat": 38.05791221990719,
+      "lon": 23.982412071046884
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια τύφλωση. Απαιτούνται δύο διασώστες",
+    "present": 0,
+    "distance_from_danger": 487,
+    "danger_level": 80
+  },
+  {
+    "id": 120,
+    "fullname": "Νίκος Μάνου",
+    "coordinates": {
+      "lat": 38.05311089954715,
+      "lon": 23.977547268298707
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 2327,
+    "danger_level": 6
+  },
+  {
+    "id": 121,
+    "fullname": "Χρήστος Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.054280347119494,
+      "lon": 23.992326982204865
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 680,
+    "danger_level": 72
+  },
+  {
+    "id": 122,
+    "fullname": "Αγγελική Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.031108106647935,
+      "lon": 23.9944103732855
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 439,
+    "danger_level": 82
+  },
+  {
+    "id": 123,
+    "fullname": "Χρήστος Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.06808310061633,
+      "lon": 23.9737725950017
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια τύφλωση. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1492,
+    "danger_level": 40
+  },
+  {
+    "id": 124,
+    "fullname": "Κατερίνα Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.043674499217936,
+      "lon": 23.970453730867312
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια κώφωση. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 1504,
+    "danger_level": 39
+  },
+  {
+    "id": 125,
+    "fullname": "Χρήστος Πολίτη",
+    "coordinates": {
+      "lat": 38.02897712810313,
+      "lon": 23.992964824986903
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται άμεση ιατρική υποστήριξη. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 2647,
+    "danger_level": 0
+  },
+  {
+    "id": 126,
+    "fullname": "Κατερίνα Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.04361081024247,
+      "lon": 23.970096152939437
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια κώφωση. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 1579,
+    "danger_level": 36
+  },
+  {
+    "id": 127,
+    "fullname": "Μιχάλης Σαμαρά",
+    "coordinates": {
+      "lat": 38.024292421004084,
+      "lon": 23.958933987414675
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια κώφωση. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 1317,
+    "danger_level": 47
+  },
+  {
+    "id": 128,
+    "fullname": "Χρήστος Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.06799322653847,
+      "lon": 23.9747904873661
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια τύφλωση. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1287,
+    "danger_level": 48
+  },
+  {
+    "id": 129,
+    "fullname": "Ελπίδα Τσεκούρας",
+    "coordinates": {
+      "lat": 38.059604202948314,
+      "lon": 23.992798178501612
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1427,
+    "danger_level": 42
+  },
+  {
+    "id": 130,
+    "fullname": "Μιχάλης Σαμαρά",
+    "coordinates": {
+      "lat": 38.02601385967558,
+      "lon": 23.95967691064465
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 1210,
+    "danger_level": 51
+  },
+  {
+    "id": 131,
+    "fullname": "Μαρία Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.05509556262528,
+      "lon": 23.984812249324595
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 1274,
+    "danger_level": 49
+  },
+  {
+    "id": 132,
+    "fullname": "Φωτεινή Πολίτη",
+    "coordinates": {
+      "lat": 38.04971465946832,
+      "lon": 23.99023202706018
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται άμεση ιατρική υποστήριξη. Απαιτούνται δύο διασώστες",
+    "present": 1,
+    "distance_from_danger": 678,
+    "danger_level": 72
+  },
+  {
+    "id": 133,
+    "fullname": "Ελένη Σαμαρά",
+    "coordinates": {
+      "lat": 38.05620776835037,
+      "lon": 23.982177942802974
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια τύφλωση. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1600,
+    "danger_level": 36
+  },
+  {
+    "id": 134,
+    "fullname": "Μαρία Ρούσσος",
+    "coordinates": {
+      "lat": 38.028598507210866,
+      "lon": 23.99307806020978
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 1405,
+    "danger_level": 43
+  },
+  {
+    "id": 135,
+    "fullname": "Άννα Πολίτη",
+    "coordinates": {
+      "lat": 38.055888428883485,
+      "lon": 23.99047471821201
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1168,
+    "danger_level": 53
+  },
+  {
+    "id": 136,
+    "fullname": "Αναστάσιος Τσεκούρας",
+    "coordinates": {
+      "lat": 38.0282545409318,
+      "lon": 23.954777914612407
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 1897,
+    "danger_level": 24
+  },
+  {
+    "id": 137,
+    "fullname": "Ελένη Στεργίου",
+    "coordinates": {
+      "lat": 38.06087882299907,
+      "lon": 23.968803917971456
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 649,
+    "danger_level": 74
+  },
+  {
+    "id": 138,
+    "fullname": "Θανάσης Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.069756657759896,
+      "lon": 23.968030467397774
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 1707,
+    "danger_level": 31
+  },
+  {
+    "id": 139,
+    "fullname": "Βασιλική Πολίτη",
+    "coordinates": {
+      "lat": 38.06087187026138,
+      "lon": 23.98960102284507
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά καρδιολογικά προβλήματα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1389,
+    "danger_level": 44
+  },
+  {
+    "id": 140,
+    "fullname": "Γιώργος Στρατή",
+    "coordinates": {
+      "lat": 38.04886971145343,
+      "lon": 23.99502280489791
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1107,
+    "danger_level": 55
+  },
+  {
+    "id": 141,
+    "fullname": "Θανάσης Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.05965840311363,
+      "lon": 23.97053592934393
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια επιληψία. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1538,
+    "danger_level": 38
+  },
+  {
+    "id": 142,
+    "fullname": "Γιώργος Ιωαννίδης",
+    "coordinates": {
+      "lat": 38.033850886416005,
+      "lon": 23.95495150055807
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά επιληψία. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 1018,
+    "danger_level": 59
+  },
+  {
+    "id": 143,
+    "fullname": "Νίκος Στεργίου",
+    "coordinates": {
+      "lat": 38.04000964647308,
+      "lon": 23.981407831602677
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 1265,
+    "danger_level": 49
+  },
+  {
+    "id": 144,
+    "fullname": "Γιώργος Μάνου",
+    "coordinates": {
+      "lat": 38.041063948108885,
+      "lon": 23.97493161391911
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 1008,
+    "danger_level": 59
+  },
+  {
+    "id": 145,
+    "fullname": "Ελπίδα Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.02556086310112,
+      "lon": 23.99857281359467
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια αναπηρία. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 2644,
+    "danger_level": 0
+  },
+  {
+    "id": 146,
+    "fullname": "Γιώργος Μακρή",
+    "coordinates": {
+      "lat": 38.05499993881572,
+      "lon": 23.98651934784807
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 2438,
+    "danger_level": 2
+  },
+  {
+    "id": 147,
+    "fullname": "Φωτεινή Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.0292671574112,
+      "lon": 23.957721401606875
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 2,
+    "notes": "Ήπια κώφωση. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 2222,
+    "danger_level": 11
+  },
+  {
+    "id": 148,
+    "fullname": "Αγγελική Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.04778737388552,
+      "lon": 23.97849033400658
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά άνοια. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 959,
+    "danger_level": 61
+  },
+  {
+    "id": 149,
+    "fullname": "Άννα Τσιλιγγίρης",
+    "coordinates": {
+      "lat": 38.02837993916668,
+      "lon": 23.954277761500595
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1406,
+    "danger_level": 43
+  },
+  {
+    "id": 150,
+    "fullname": "Νίκος Πολίτη",
+    "coordinates": {
+      "lat": 38.04971829368908,
+      "lon": 23.975914234710395
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1744,
+    "danger_level": 30
+  },
+  {
+    "id": 151,
+    "fullname": "Νίκος Στεργίου",
+    "coordinates": {
+      "lat": 38.04003100093059,
+      "lon": 23.980829041955015
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 1093,
+    "danger_level": 56
+  },
+  {
+    "id": 152,
+    "fullname": "Χρήστος Μακρή",
+    "coordinates": {
+      "lat": 38.06583676603329,
+      "lon": 23.97548092034418
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια σοβαρή αρθρίτιδα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 1107,
+    "danger_level": 55
+  },
+  {
+    "id": 153,
+    "fullname": "Κατερίνα Στρατή",
+    "coordinates": {
+      "lat": 38.03411028437568,
+      "lon": 23.987807892124714
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται υποστήριξη από μηχάνημα. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 2170,
+    "danger_level": 13
+  },
+  {
+    "id": 154,
+    "fullname": "Βασιλική Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.027578104183945,
+      "lon": 23.987421546910905
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 642,
+    "danger_level": 74
+  },
+  {
+    "id": 155,
+    "fullname": "Δημήτρης Μπεκιάρης",
+    "coordinates": {
+      "lat": 38.06981543199963,
+      "lon": 23.969152902290862
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια κώφωση. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1150,
+    "danger_level": 54
+  },
+  {
+    "id": 156,
+    "fullname": "Φωτεινή Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.027857484955994,
+      "lon": 23.95874980222255
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια κώφωση. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 2207,
+    "danger_level": 11
+  },
+  {
+    "id": 157,
+    "fullname": "Μαρία Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.05530779914988,
+      "lon": 23.977534048221536
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια σοβαρή αρθρίτιδα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 2153,
+    "danger_level": 13
+  },
+  {
+    "id": 158,
+    "fullname": "Μαρία Σαμαρά",
+    "coordinates": {
+      "lat": 38.02757778676834,
+      "lon": 23.959651134587816
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά άνοια. Χρειάζεται υποστήριξη από μηχάνημα. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 553,
+    "danger_level": 77
+  },
+  {
+    "id": 159,
+    "fullname": "Σοφία Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.06051780633244,
+      "lon": 23.99141312274364
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 840,
+    "danger_level": 66
+  },
+  {
+    "id": 160,
+    "fullname": "Αγγελική Τσεκούρας",
+    "coordinates": {
+      "lat": 38.042555012329565,
+      "lon": 23.97331990152517
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1929,
+    "danger_level": 22
+  },
+  {
+    "id": 161,
+    "fullname": "Άννα Πολίτη",
+    "coordinates": {
+      "lat": 38.05599564386044,
+      "lon": 23.990909589145243
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1636,
+    "danger_level": 34
+  },
+  {
+    "id": 162,
+    "fullname": "Ελένη Σαμαρά",
+    "coordinates": {
+      "lat": 38.05564240110263,
+      "lon": 23.982270852512592
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια τύφλωση. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1603,
+    "danger_level": 35
+  },
+  {
+    "id": 163,
+    "fullname": "Γιώργος Ρούσσος",
+    "coordinates": {
+      "lat": 38.03809967737502,
+      "lon": 23.98040159643418
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται άμεση ιατρική υποστήριξη. Απαιτούνται δύο διασώστες",
+    "present": 0,
+    "distance_from_danger": 2571,
+    "danger_level": 0
+  },
+  {
+    "id": 164,
+    "fullname": "Θανάσης Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.02918031289895,
+      "lon": 23.99389765629488
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια σοβαρή αρθρίτιδα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 892,
+    "danger_level": 64
+  },
+  {
+    "id": 165,
+    "fullname": "Ελένη Σαμαρά",
+    "coordinates": {
+      "lat": 38.05652971157727,
+      "lon": 23.982209882423884
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια τύφλωση. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1672,
+    "danger_level": 33
+  },
+  {
+    "id": 166,
+    "fullname": "Αναστάσιος Ρούσσος",
+    "coordinates": {
+      "lat": 38.06024951185079,
+      "lon": 23.973353549709373
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1032,
+    "danger_level": 58
+  },
+  {
+    "id": 167,
+    "fullname": "Άννα Μακρή",
+    "coordinates": {
+      "lat": 38.05038229097364,
+      "lon": 23.984985288113485
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά επιληψία. Χρειάζεται υποστήριξη από μηχάνημα. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1485,
+    "danger_level": 40
+  },
+  {
+    "id": 168,
+    "fullname": "Βασιλική Ιωαννίδης",
+    "coordinates": {
+      "lat": 38.05923363513289,
+      "lon": 23.992923123352345
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 1573,
+    "danger_level": 37
+  },
+  {
+    "id": 169,
+    "fullname": "Χρήστος Πολίτη",
+    "coordinates": {
+      "lat": 38.03003625217836,
+      "lon": 23.992504359535356
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται άμεση ιατρική υποστήριξη. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 2199,
+    "danger_level": 12
+  },
+  {
+    "id": 170,
+    "fullname": "Χρήστος Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.067516797778126,
+      "lon": 23.974148178180478
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια τύφλωση. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1217,
+    "danger_level": 51
+  },
+  {
+    "id": 171,
+    "fullname": "Μαρία Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.055028165559754,
+      "lon": 23.977868759749693
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια σοβαρή αρθρίτιδα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 2125,
+    "danger_level": 15
+  },
+  {
+    "id": 172,
+    "fullname": "Κατερίνα Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.04964863054718,
+      "lon": 23.99516166220347
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά αναπνευστικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Απαιτούνται δύο διασώστες",
+    "present": 1,
+    "distance_from_danger": 981,
+    "danger_level": 60
+  },
+  {
+    "id": 173,
+    "fullname": "Μαρία Τσιλιγγίρης",
+    "coordinates": {
+      "lat": 38.051768058707225,
+      "lon": 23.99393506131185
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 2242,
+    "danger_level": 10
+  },
+  {
+    "id": 174,
+    "fullname": "Κατερίνα Στρατή",
+    "coordinates": {
+      "lat": 38.03410708323288,
+      "lon": 23.987936954168518
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται υποστήριξη από μηχάνημα. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 0,
+    "distance_from_danger": 2488,
+    "danger_level": 0
+  },
+  {
+    "id": 175,
+    "fullname": "Άννα Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.046459346784836,
+      "lon": 23.989538018928997
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά άνοια. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1525,
+    "danger_level": 39
+  },
+  {
+    "id": 176,
+    "fullname": "Θανάσης Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.0597383061812,
+      "lon": 23.969882152678533
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια επιληψία. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1115,
+    "danger_level": 55
+  },
+  {
+    "id": 177,
+    "fullname": "Νίκος Μάνου",
+    "coordinates": {
+      "lat": 38.052985369792346,
+      "lon": 23.975985370122892
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 2225,
+    "danger_level": 10
+  },
+  {
+    "id": 178,
+    "fullname": "Νίκος Μάνου",
+    "coordinates": {
+      "lat": 38.05217028645731,
+      "lon": 23.97618184652771
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 2482,
+    "danger_level": 0
+  },
+  {
+    "id": 179,
+    "fullname": "Σοφία Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.06012094589028,
+      "lon": 23.97668703266057
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 2066,
+    "danger_level": 17
+  },
+  {
+    "id": 180,
+    "fullname": "Φωτεινή Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.05885393989533,
+      "lon": 23.984515572041442
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά καρδιολογικά προβλήματα. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1358,
+    "danger_level": 45
+  },
+  {
+    "id": 181,
+    "fullname": "Κατερίνα Μακρή",
+    "coordinates": {
+      "lat": 38.02431572142712,
+      "lon": 23.990237917858988
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 3,
+    "notes": "Ήπια κώφωση. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 676,
+    "danger_level": 72
+  },
+  {
+    "id": 182,
+    "fullname": "Κατερίνα Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.044489219627785,
+      "lon": 23.9700185123763
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια κώφωση. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 1639,
+    "danger_level": 34
+  },
+  {
+    "id": 183,
+    "fullname": "Χρήστος Στρατή",
+    "coordinates": {
+      "lat": 38.037494597757956,
+      "lon": 23.980421569781093
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 1414,
+    "danger_level": 43
+  },
+  {
+    "id": 184,
+    "fullname": "Αγγελική Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.03200850733354,
+      "lon": 23.99526089786738
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 266,
+    "danger_level": 89
+  },
+  {
+    "id": 185,
+    "fullname": "Μιχάλης Ρούσσος",
+    "coordinates": {
+      "lat": 38.039978768061744,
+      "lon": 23.97647860880656
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 994,
+    "danger_level": 60
+  },
+  {
+    "id": 186,
+    "fullname": "Γιώργος Μάνου",
+    "coordinates": {
+      "lat": 38.04053219182138,
+      "lon": 23.976333855763606
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 820,
+    "danger_level": 67
+  },
+  {
+    "id": 187,
+    "fullname": "Κατερίνα Κωνσταντίνου",
+    "coordinates": {
+      "lat": 38.049537898869936,
+      "lon": 23.985564686687663
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια τύφλωση. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 230,
+    "danger_level": 90
+  },
+  {
+    "id": 188,
+    "fullname": "Άννα Σαμαρά",
+    "coordinates": {
+      "lat": 38.058954782341175,
+      "lon": 23.991449618667197
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 203,
+    "danger_level": 91
+  },
+  {
+    "id": 189,
+    "fullname": "Ελένη Στεργίου",
+    "coordinates": {
+      "lat": 38.06125946494475,
+      "lon": 23.968909958632526
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 707,
+    "danger_level": 71
+  },
+  {
+    "id": 190,
+    "fullname": "Δημήτρης Βασιλείου",
+    "coordinates": {
+      "lat": 38.06951249455241,
+      "lon": 23.972114346795433
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 624,
+    "danger_level": 75
+  },
+  {
+    "id": 191,
+    "fullname": "Ελπίδα Τσεκούρας",
+    "coordinates": {
+      "lat": 38.059771581686284,
+      "lon": 23.993391477090697
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά επιληψία. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1801,
+    "danger_level": 27
+  },
+  {
+    "id": 192,
+    "fullname": "Πέτρος Στρατή",
+    "coordinates": {
+      "lat": 38.03085268347063,
+      "lon": 23.956110512157117
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 867,
+    "danger_level": 65
+  },
+  {
+    "id": 193,
+    "fullname": "Φωτεινή Μπεκιάρης",
+    "coordinates": {
+      "lat": 38.06887578994548,
+      "lon": 23.973025645850402
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Απαιτούνται δύο διασώστες",
+    "present": 1,
+    "distance_from_danger": 533,
+    "danger_level": 78
+  },
+  {
+    "id": 194,
+    "fullname": "Άννα Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.0450956195641,
+      "lon": 23.993518693436453
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 1699,
+    "danger_level": 32
+  },
+  {
+    "id": 195,
+    "fullname": "Αγγελική Τσεκούρας",
+    "coordinates": {
+      "lat": 38.04105105445363,
+      "lon": 23.972530253957693
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 2322,
+    "danger_level": 7
+  },
+  {
+    "id": 196,
+    "fullname": "Νίκος Μάνου",
+    "coordinates": {
+      "lat": 38.052386404058865,
+      "lon": 23.97707387208643
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 2029,
+    "danger_level": 18
+  },
+  {
+    "id": 197,
+    "fullname": "Κατερίνα Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.02668307082269,
+      "lon": 23.959389681394075
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια σοβαρή αρθρίτιδα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 1652,
+    "danger_level": 33
+  },
+  {
+    "id": 198,
+    "fullname": "Βασιλική Πολίτη",
+    "coordinates": {
+      "lat": 38.06098029282107,
+      "lon": 23.989599893330738
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά καρδιολογικά προβλήματα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1526,
+    "danger_level": 38
+  },
+  {
+    "id": 199,
+    "fullname": "Αγγελική Μάνου",
+    "coordinates": {
+      "lat": 38.03252993574869,
+      "lon": 23.98818574701311
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 1250,
+    "danger_level": 50
+  },
+  {
+    "id": 200,
+    "fullname": "Ελπίδα Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.05965060130836,
+      "lon": 23.97359973533456
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 812,
+    "danger_level": 67
+  },
+  {
+    "id": 201,
+    "fullname": "Φωτεινή Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.06106713552654,
+      "lon": 23.97700512232256
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 2294,
+    "danger_level": 8
+  },
+  {
+    "id": 202,
+    "fullname": "Κατερίνα Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.04387092094154,
+      "lon": 23.97060255713113
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια κώφωση. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 1500,
+    "danger_level": 40
+  },
+  {
+    "id": 203,
+    "fullname": "Χρήστος Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.067661684012116,
+      "lon": 23.9746105153996
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια τύφλωση. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1124,
+    "danger_level": 55
+  },
+  {
+    "id": 204,
+    "fullname": "Νίκος Μάνου",
+    "coordinates": {
+      "lat": 38.05228646020084,
+      "lon": 23.976466434017155
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1838,
+    "danger_level": 26
+  },
+  {
+    "id": 205,
+    "fullname": "Μαρία Ιωαννίδης",
+    "coordinates": {
+      "lat": 38.03364511250731,
+      "lon": 23.95352678471511
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1764,
+    "danger_level": 29
+  },
+  {
+    "id": 206,
+    "fullname": "Ελένη Στεργίου",
+    "coordinates": {
+      "lat": 38.062149153219934,
+      "lon": 23.969137586276297
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1041,
+    "danger_level": 58
+  },
+  {
+    "id": 207,
+    "fullname": "Γιώργος Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.05495741270835,
+      "lon": 23.9845759203841
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1103,
+    "danger_level": 55
+  },
+  {
+    "id": 208,
+    "fullname": "Γιώργος Ιωαννίδης",
+    "coordinates": {
+      "lat": 38.03439986837819,
+      "lon": 23.955893125077484
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά επιληψία. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 1326,
+    "danger_level": 46
+  },
+  {
+    "id": 209,
+    "fullname": "Φωτεινή Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.05793857160416,
+      "lon": 23.984881024737437
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά καρδιολογικά προβλήματα. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1123,
+    "danger_level": 55
+  },
+  {
+    "id": 210,
+    "fullname": "Γιώργος Στρατή",
+    "coordinates": {
+      "lat": 38.04978026297897,
+      "lon": 23.994681387394685
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 896,
+    "danger_level": 64
+  },
+  {
+    "id": 211,
+    "fullname": "Άννα Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.0467847294209,
+      "lon": 23.990264563891895
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά άνοια. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1360,
+    "danger_level": 45
+  },
+  {
+    "id": 212,
+    "fullname": "Ελπίδα Μάνου",
+    "coordinates": {
+      "lat": 38.04229442103136,
+      "lon": 23.975738891046525
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1647,
+    "danger_level": 34
+  },
+  {
+    "id": 213,
+    "fullname": "Κατερίνα Κωνσταντίνου",
+    "coordinates": {
+      "lat": 38.04926604269284,
+      "lon": 23.985894762602943
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια τύφλωση. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 142,
+    "danger_level": 94
+  },
+  {
+    "id": 214,
+    "fullname": "Αναστάσιος Ρούσσος",
+    "coordinates": {
+      "lat": 38.05976357621515,
+      "lon": 23.97285584351283
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1374,
+    "danger_level": 45
+  },
+  {
+    "id": 215,
+    "fullname": "Μαρία Ιωαννίδης",
+    "coordinates": {
+      "lat": 38.03370540881795,
+      "lon": 23.953194633635484
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1332,
+    "danger_level": 46
+  },
+  {
+    "id": 216,
+    "fullname": "Γιώργος Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.0545295586595,
+      "lon": 23.986021953652386
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1285,
+    "danger_level": 48
+  },
+  {
+    "id": 217,
+    "fullname": "Χρήστος Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.025229906573394,
+      "lon": 23.959727617558467
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται άμεση ιατρική υποστήριξη. Απαιτούνται δύο διασώστες",
+    "present": 1,
+    "distance_from_danger": 2259,
+    "danger_level": 9
+  },
+  {
+    "id": 218,
+    "fullname": "Φωτεινή Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.02862141019905,
+      "lon": 23.957605811614265
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια κώφωση. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 2234,
+    "danger_level": 10
+  },
+  {
+    "id": 219,
+    "fullname": "Γιώργος Μάνου",
+    "coordinates": {
+      "lat": 38.058356737625424,
+      "lon": 23.969420932297425
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 9,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται άμεση ιατρική υποστήριξη. Απαιτούνται δύο διασώστες",
+    "present": 1,
+    "distance_from_danger": 740,
+    "danger_level": 70
+  },
+  {
+    "id": 220,
+    "fullname": "Σοφία Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.06004745277022,
+      "lon": 23.991132395464287
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 598,
+    "danger_level": 76
+  },
+  {
+    "id": 221,
+    "fullname": "Άννα Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.04575191782781,
+      "lon": 23.993461162957125
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 2016,
+    "danger_level": 19
+  },
+  {
+    "id": 222,
+    "fullname": "Αγγελική Τσεκούρας",
+    "coordinates": {
+      "lat": 38.042139224507295,
+      "lon": 23.973698503158673
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια κώφωση. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 2246,
+    "danger_level": 10
+  },
+  {
+    "id": 223,
+    "fullname": "Κατερίνα Στρατή",
+    "coordinates": {
+      "lat": 38.03388860515959,
+      "lon": 23.988627270671206
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά κατάκοιτος. Χρειάζεται υποστήριξη από μηχάνημα. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 0,
+    "distance_from_danger": 2289,
+    "danger_level": 8
+  },
+  {
+    "id": 224,
+    "fullname": "Γιώργος Πολίτη",
+    "coordinates": {
+      "lat": 38.04175995321362,
+      "lon": 23.977699070271306
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια επιληψία. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 2566,
+    "danger_level": 0
+  },
+  {
+    "id": 225,
+    "fullname": "Θανάσης Στεργίου",
+    "coordinates": {
+      "lat": 38.022606676335954,
+      "lon": 23.988160906655988
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 116,
+    "danger_level": 95
+  },
+  {
+    "id": 226,
+    "fullname": "Νίκος Μάνου",
+    "coordinates": {
+      "lat": 38.05190273932432,
+      "lon": 23.976112383735128
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 2018,
+    "danger_level": 19
+  },
+  {
+    "id": 227,
+    "fullname": "Σοφία Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.06176457860442,
+      "lon": 23.976299449214324
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπηρία. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 1950,
+    "danger_level": 21
+  },
+  {
+    "id": 228,
+    "fullname": "Ελπίδα Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.05889035435635,
+      "lon": 23.97349849984321
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 616,
+    "danger_level": 75
+  },
+  {
+    "id": 229,
+    "fullname": "Σοφία Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.06083964110399,
+      "lon": 23.991923372690998
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 589,
+    "danger_level": 76
+  },
+  {
+    "id": 230,
+    "fullname": "Θανάσης Κωνσταντίνου",
+    "coordinates": {
+      "lat": 38.06085878120123,
+      "lon": 23.98716506180801
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια τύφλωση. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 2121,
+    "danger_level": 15
+  },
+  {
+    "id": 231,
+    "fullname": "Σοφία Στεργίου",
+    "coordinates": {
+      "lat": 38.05867324012842,
+      "lon": 23.979242680137006
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια αναπηρία. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 1,
+    "distance_from_danger": 1871,
+    "danger_level": 25
+  },
+  {
+    "id": 232,
+    "fullname": "Κατερίνα Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.06458535524515,
+      "lon": 23.976161791573503
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 623,
+    "danger_level": 75
+  },
+  {
+    "id": 233,
+    "fullname": "Ελπίδα Τσεκούρας",
+    "coordinates": {
+      "lat": 38.06058058251634,
+      "lon": 23.992028933147285
+    },
+    "gender": 1,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 1052,
+    "danger_level": 57
+  },
+  {
+    "id": 234,
+    "fullname": "Φωτεινή Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.03016512773032,
+      "lon": 23.95867224506706
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 2,
+    "notes": "Ήπια κώφωση. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 2182,
+    "danger_level": 12
+  },
+  {
+    "id": 235,
+    "fullname": "Θανάσης Θεοδωρίδου",
+    "coordinates": {
+      "lat": 38.0290432352291,
+      "lon": 23.994420413403777
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια σοβαρή αρθρίτιδα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 909,
+    "danger_level": 63
+  },
+  {
+    "id": 236,
+    "fullname": "Άννα Πολίτη",
+    "coordinates": {
+      "lat": 38.056089951997954,
+      "lon": 23.99071185268733
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Μπείτε από την πίσω πόρτα",
+    "present": 0,
+    "distance_from_danger": 1631,
+    "danger_level": 34
+  },
+  {
+    "id": 237,
+    "fullname": "Κωνσταντίνα Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.052339516696634,
+      "lon": 23.992711827351116
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια τύφλωση. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 1139,
+    "danger_level": 54
+  },
+  {
+    "id": 238,
+    "fullname": "Μιχάλης Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.04310264763139,
+      "lon": 23.971859378446112
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 5,
+    "notes": "Μέτρια αναπηρία. Η αυλή έχει σκύλο, είναι φιλικός",
+    "present": 0,
+    "distance_from_danger": 952,
+    "danger_level": 61
+  },
+  {
+    "id": 239,
+    "fullname": "Σοφία Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.06021118868821,
+      "lon": 23.990751598277814
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 7,
+    "notes": "Σοβαρά άνοια. Μπείτε από την πίσω πόρτα",
+    "present": 1,
+    "distance_from_danger": 934,
+    "danger_level": 62
+  },
+  {
+    "id": 240,
+    "fullname": "Χρήστος Μάνου",
+    "coordinates": {
+      "lat": 38.050401803182574,
+      "lon": 23.986522393510963
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 2141,
+    "danger_level": 14
+  },
+  {
+    "id": 241,
+    "fullname": "Κατερίνα Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.06575282792336,
+      "lon": 23.976491078758745
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 426,
+    "danger_level": 82
+  },
+  {
+    "id": 242,
+    "fullname": "Νίκος Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.06328764412332,
+      "lon": 23.97227824902858
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά επιληψία. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 1281,
+    "danger_level": 48
+  },
+  {
+    "id": 243,
+    "fullname": "Αναστάσιος Τσεκούρας",
+    "coordinates": {
+      "lat": 38.02862023268733,
+      "lon": 23.95400939633195
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 8,
+    "notes": "Σοβαρά αναπνευστικά προβλήματα. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 1,
+    "distance_from_danger": 1595,
+    "danger_level": 36
+  },
+  {
+    "id": 244,
+    "fullname": "Κατερίνα Σιδηροπούλου",
+    "coordinates": {
+      "lat": 38.045427975492395,
+      "lon": 23.969349285450846
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 4,
+    "notes": "Μέτρια κώφωση. Χρησιμοποιήστε ήρεμο τόνο",
+    "present": 0,
+    "distance_from_danger": 2022,
+    "danger_level": 19
+  },
+  {
+    "id": 245,
+    "fullname": "Κατερίνα Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.06482300340848,
+      "lon": 23.97663193745873
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 1,
+    "distance_from_danger": 422,
+    "danger_level": 83
+  },
+  {
+    "id": 246,
+    "fullname": "Φωτεινή Λαμπρόπουλος",
+    "coordinates": {
+      "lat": 38.02977822124449,
+      "lon": 23.957987203179336
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 2,
+    "notes": "Ήπια κώφωση. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 2073,
+    "danger_level": 17
+  },
+  {
+    "id": 247,
+    "fullname": "Δημήτρης Ιωαννίδης",
+    "coordinates": {
+      "lat": 38.02234244641261,
+      "lon": 23.956213332288833
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 6,
+    "notes": "Μέτρια αναπηρία. Είσοδος από τον κήπο",
+    "present": 0,
+    "distance_from_danger": 1345,
+    "danger_level": 46
+  },
+  {
+    "id": 248,
+    "fullname": "Άννα Παπαδοπούλου",
+    "coordinates": {
+      "lat": 38.04492957869867,
+      "lon": 23.995192839283902
+    },
+    "gender": 0,
+    "life_support": 1,
+    "vulnerability_score": 10,
+    "notes": "Πολύ σοβαρά καρδιολογικά προβλήματα. Χρειάζεται υποστήριξη από μηχάνημα. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 1838,
+    "danger_level": 26
+  },
+  {
+    "id": 249,
+    "fullname": "Γιώργος Ανδρεάδης",
+    "coordinates": {
+      "lat": 38.05344932769232,
+      "lon": 23.98557003639751
+    },
+    "gender": 0,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια σοβαρή αρθρίτιδα. Είσοδος από τον κήπο",
+    "present": 1,
+    "distance_from_danger": 1418,
+    "danger_level": 43
+  },
+  {
+    "id": 250,
+    "fullname": "Νίκος Μάνου",
+    "coordinates": {
+      "lat": 38.03131771722647,
+      "lon": 23.988697573589018
+    },
+    "gender": 1,
+    "life_support": 0,
+    "vulnerability_score": 3,
+    "notes": "Ήπια κώφωση. Η κύρια είσοδος είναι μπλοκαρισμένη",
+    "present": 0,
+    "distance_from_danger": 1315,
+    "danger_level": 47
+  }
+]

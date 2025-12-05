@@ -25,7 +25,7 @@ def render_map(processed_data, fire_sim_lat, fire_sim_lon, rescuer_lat, rescuer_
     st.subheader("📍 Live Tactical Map")
 
     # Initialize Map centered at the fire (or generic center)
-    m = folium.Map(location=[40.6401, 22.9444], zoom_start=14)
+    m = folium.Map(location=[38.049498421610664, 23.98779210235504], zoom_start=14)
 
     # Layer 2: The Fire (Heatmap/Circle)
     folium.Circle(
@@ -54,24 +54,24 @@ def render_map(processed_data, fire_sim_lat, fire_sim_lon, rescuer_lat, rescuer_
             tooltip=f"{row['id']}"
         ).add_to(m)
 
-    # Layer 3: The Rescuer
-    folium.Marker(
-        location=[rescuer_lat, rescuer_lon],
-        popup="Rescuer Unit",
-        tooltip="Rescuer",
-        icon=folium.Icon(color="blue", icon="ambulance", prefix='fa')
-    ).add_to(m)
+    # # Layer 3: The Rescuer
+    # folium.Marker(
+    #     location=[rescuer_lat, rescuer_lon],
+    #     popup="Rescuer Unit",
+    #     tooltip="Rescuer",
+    #     icon=folium.Icon(color="blue", icon="ambulance", prefix='fa')
+    # ).add_to(m)
 
     # Layer 4: Routing (Lines from Rescuer to High Urgency Targets)
-    if show_routes:
-        for _, row in top_priorities.iterrows():
-            folium.PolyLine(
-                locations=[[rescuer_lat, rescuer_lon], [row['lat'], row['lon']]],
-                color="yellow",
-                weight=5,
-                opacity=0.8,
-                tooltip=f"Route to {row['id']}"
-            ).add_to(m)
+    # if show_routes:
+    #     for _, row in top_priorities.iterrows():
+    #         folium.PolyLine(
+    #             locations=[[rescuer_lat, rescuer_lon], [row['lat'], row['lon']]],
+    #             color="yellow",
+    #             weight=5,
+    #             opacity=0.8,
+    #             tooltip=f"Route to {row['id']}"
+    #         ).add_to(m)
 
     # Render Map using streamlit-folium
     st_folium(m, width=None, height=500)
