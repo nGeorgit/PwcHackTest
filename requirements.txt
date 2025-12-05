@@ -4,3 +4,4 @@ numpy
 pydeck
 openai
 watchdog
+python-dotenv
