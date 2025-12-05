@@ -1,0 +1,21 @@
+# --- Python Basics ---
+__pycache__/
+*.pyc
+
+# --- Virtual Environments (Critical!) ---
+# This prevents the 100MB+ venv folder from being uploaded
+venv/
+env/
+.venv/
+
+# --- Secrets & Keys (Safety First) ---
+# Never let these get to GitHub
+.env
+.streamlit/secrets.toml
+
+# --- Operating System Junk ---
+.DS_Store
+Thumbs.db
+
+# --- VS Code Settings (Optional) ---
+.vscode/
