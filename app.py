@@ -22,7 +22,7 @@ with st.sidebar:
         st.rerun()
 
 # --- MAIN SETUP ---
-st.title("🚀 My Hackathon MVP")
+st.title("🚀 My Hackathon MVP2")
 st.caption("Powered by Azure OpenAI + Streamlit")
 
 # 1. Initialize Chat History (The Fix for "Refresh Death")
