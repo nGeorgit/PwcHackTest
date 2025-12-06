@@ -30,6 +30,9 @@ if "zoom" not in st.session_state:
 
 if "selected_citizen_id" not in st.session_state:
     st.session_state.selected_citizen_id = None
+    
+if 'list_widget_key' not in st.session_state:
+    st.session_state.list_widget_key = 0
 
 if "dataframe_key" not in st.session_state:
     st.session_state.dataframe_key = 0
@@ -63,7 +66,7 @@ if prompt:
     top_target = processed_data.iloc[0] if not processed_data.empty else None
     context_data = {
         "top_target_id": top_target['id'] if top_target is not None else "N/A",
-        "high_risk_count": len(processed_data[processed_data['urgency_score'] > 70])
+        "high_risk_count": len(processed_data[processed_data['urgency_score'] > 70])    
     }
 
     response_text = AIAssistant.get_response(prompt, context_data)
@@ -85,48 +88,96 @@ with col_map:
         selected_id=st.session_state.selected_citizen_id
     )
 
-    # Handle Map Clicks (Map -> List)
-    # We check if 'last_object_clicked' is available and valid
-    if map_data.get('last_object_clicked'):
+    # 1. Check if map_data exists AND if a specific object (marker) was clicked.
+    # If the user clicks "the void", 'last_object_clicked' is usually None.
+    if map_data and map_data.get('last_object_clicked'):
+        
+        # Extract coordinates from the OBJECT clicked, not the general map click
         click_lat = map_data['last_object_clicked']['lat']
         click_lon = map_data['last_object_clicked']['lng']
 
-        # Find closest citizen to clicked lat/lon
+        # Find closest citizen/object to clicked lat/lon
         match = processed_data[
             (processed_data['lat'] == click_lat) &
             (processed_data['lon'] == click_lon)
         ]
+        
+        if not match.empty:
+            clicked_id = match.iloc[0]['id']
+        
+        # CRITICAL STEP: Update the Session State
+        if st.session_state.selected_citizen_id != clicked_id:
+            st.session_state.selected_citizen_id = clicked_id
+            st.rerun()  # <--- Triggers the app to reload with the new ID
 
         if not match.empty:
             clicked_id = match.iloc[0]['id']
-            # If selection changed
+            
+            # 2. State Guard: Only rerun if the selection effectively CHANGES
+            # This prevents reruns if the user clicks the same marker twice.
             if st.session_state.selected_citizen_id != clicked_id:
                 st.session_state.selected_citizen_id = clicked_id
-                # Increment key to reset list selection
-                st.session_state.dataframe_key += 1
+                
+                st.session_state.list_widget_key += 1
                 st.rerun()
 
+# with col_map:
+#     # Render Map and capture click events
+#     map_data = render_map(
+#         processed_data,
+#         center_coords=st.session_state.map_center,
+#         zoom=st.session_state.zoom
+#     )
+
+#     # Handle Map Clicks (Map -> List)
+#     if map_data['last_object_clicked_popup']:
+#         # Extract ID from popup text if possible, or use lat/lon matching
+#         # Popup format is HTML, but tooltip usually has ID.
+#         # Easier: Find closest citizen to clicked lat/lon
+#         click_lat = map_data['last_object_clicked']['lat']
+#         click_lon = map_data['last_object_clicked']['lng']
+
+#         # Simple exact match check (or very close)
+#         # Note: Folium might return slightly different precision
+#         # Let's search for exact match first
+#         match = processed_data[
+#             (processed_data['lat'] == click_lat) &
+#             (processed_data['lon'] == click_lon)
+#         ]
+
+#         if not match.empty:
+#             clicked_id = match.iloc[0]['id']
+#             if st.session_state.selected_citizen_id != clicked_id:
+#                 st.session_state.selected_citizen_id = clicked_id
+#                 st.rerun()
+
 with col_list:
-    # Render List and capture selection events
+    # Generate a unique key string based on the counter
+    # Example: "citizen_list_0", "citizen_list_1", etc.
+    dynamic_key = f"citizen_list_{st.session_state.list_widget_key}"
+
+    # Render List using the dynamic key
     selection = render_citizen_list(
-        processed_data,
+        processed_data, 
         st.session_state.selected_citizen_id,
-        key=f"citizen_list_{st.session_state.dataframe_key}"
+        widget_key=dynamic_key
     )
 
     # Handle List Selection (List -> Map)
     if selection and selection["selection"]["rows"]:
         selected_index = selection["selection"]["rows"][0]
-        # Get the row from the *displayed* dataframe (which matches processed_data order)
         selected_row = processed_data.iloc[selected_index]
 
         # Update map center and selected ID
         new_center = [selected_row['lat'], selected_row['lon']]
         new_id = selected_row['id']
 
-        # Only rerun if changed to prevent loops
         if (st.session_state.map_center != new_center) or (st.session_state.selected_citizen_id != new_id):
             st.session_state.map_center = new_center
             st.session_state.selected_citizen_id = new_id
-            st.session_state.zoom = 18 # Zoom in on selection
+            st.session_state.zoom = 18 
+            
+            # NOTE: We do NOT increment list_widget_key here. 
+            # If we did, the box the user just clicked would instantly uncheck.
+            
             st.rerun()
