@@ -93,13 +93,14 @@ def render_map(processed_data, center_coords=None, zoom=14, selected_id=None):
     # Render Map using streamlit-folium with maximized size
     return st_folium(m, use_container_width=True, height=700)
 
-def render_citizen_list(full_data, selected_id=None):
+def render_citizen_list(full_data, selected_id=None, key=None):
     """
     Renders the citizen list as a selectable dataframe.
 
     Args:
         full_data: DataFrame of citizens.
         selected_id: ID of the citizen to highlight (if possible) or display details for.
+        key: Streamlit key for the dataframe widget.
 
     Returns:
         Selection event from st.dataframe.
@@ -136,5 +137,6 @@ def render_citizen_list(full_data, selected_id=None):
         hide_index=True,
         selection_mode="single-row",
         on_select="rerun",
-        height=600
+        height=600,
+        key=key  # Use provided key
     )

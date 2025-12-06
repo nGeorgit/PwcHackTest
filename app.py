@@ -31,6 +31,9 @@ if "zoom" not in st.session_state:
 if "selected_citizen_id" not in st.session_state:
     st.session_state.selected_citizen_id = None
 
+if "dataframe_key" not in st.session_state:
+    st.session_state.dataframe_key = 0
+
 # -----------------------------------------------------------------------------
 # 3. DATA LOADING & PROCESSING
 # -----------------------------------------------------------------------------
@@ -89,10 +92,6 @@ with col_map:
         click_lon = map_data['last_object_clicked']['lng']
 
         # Find closest citizen to clicked lat/lon
-        # Using a small tolerance (e.g. 0.0001 degrees) or exact match
-        # Since we use CircleMarkers, the click should be exact coordinate of the marker center
-        # (folium usually returns the marker's lat/lon if clicked ON the marker)
-
         match = processed_data[
             (processed_data['lat'] == click_lat) &
             (processed_data['lon'] == click_lon)
@@ -100,14 +99,20 @@ with col_map:
 
         if not match.empty:
             clicked_id = match.iloc[0]['id']
-            # Only update if it's different to avoid loops, AND allow re-clicking to confirm
+            # If selection changed
             if st.session_state.selected_citizen_id != clicked_id:
                 st.session_state.selected_citizen_id = clicked_id
+                # Increment key to reset list selection
+                st.session_state.dataframe_key += 1
                 st.rerun()
 
 with col_list:
     # Render List and capture selection events
-    selection = render_citizen_list(processed_data, st.session_state.selected_citizen_id)
+    selection = render_citizen_list(
+        processed_data,
+        st.session_state.selected_citizen_id,
+        key=f"citizen_list_{st.session_state.dataframe_key}"
+    )
 
     # Handle List Selection (List -> Map)
     if selection and selection["selection"]["rows"]:
