@@ -63,10 +63,22 @@ if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
 
     # Context for AI
-    top_target = processed_data.iloc[0] if not processed_data.empty else None
+    # 1. Selected Citizen
+    selected_citizen = None
+    # Safer access to session_state
+    current_selected_id = st.session_state.get('selected_citizen_id')
+    if current_selected_id is not None:
+        sel_row = processed_data[processed_data['id'] == current_selected_id]
+        if not sel_row.empty:
+            selected_citizen = sel_row.iloc[0].to_dict()
+
+    # 2. Top Urgent Cases (Top 5)
+    top_urgent_citizens = processed_data.head(5).to_dict('records')
+
     context_data = {
-        "top_target_id": top_target['id'] if top_target is not None else "N/A",
-        "high_risk_count": len(processed_data[processed_data['urgency_score'] > 70])    
+        "high_risk_count": len(processed_data[processed_data['urgency_score'] > 70]),
+        "selected_citizen": selected_citizen,
+        "top_urgent_citizens": top_urgent_citizens
     }
 
     response_text = AIAssistant.get_response(prompt, context_data)
