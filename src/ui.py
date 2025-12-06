@@ -22,7 +22,6 @@ def render_chat_interface(messages):
 def render_sidebar(messages):
     """Renders the sidebar controls (now primarily Chat) and returns the chat prompt."""
     st.sidebar.header("🚒 Operation Controls")
-    # Routes checkbox removed as requested
 
     # Render Chat Interface
     return render_chat_interface(messages)
@@ -36,7 +35,7 @@ def render_header():
     with col_head2:
         st.metric(label="System Status", value="ACTIVE", delta="CRITICAL ALERT")
 
-def render_map(processed_data, center_coords=None, zoom=14):
+def render_map(processed_data, center_coords=None, zoom=14, selected_id=None):
     """
     Renders the Folium map.
 
@@ -44,6 +43,7 @@ def render_map(processed_data, center_coords=None, zoom=14):
         processed_data: Dataframe containing citizen data.
         center_coords: Tuple (lat, lon) to center the map.
         zoom: Initial zoom level.
+        selected_id: ID of the citizen to automatically open the popup for.
 
     Returns:
         The clicked object from st_folium.
@@ -51,14 +51,15 @@ def render_map(processed_data, center_coords=None, zoom=14):
     st.subheader("📍 Live Tactical Map")
 
     # Initialize Map
-    # Default center if none provided
     if center_coords is None:
         center_coords = [38.049498421610664, 23.98779210235504]
 
     m = folium.Map(location=center_coords, zoom_start=zoom)
 
-    # Layer 1: The People (Scatterplot equivalent)
+    # Layer 1: The People
     for _, row in processed_data.iterrows():
+        is_selected = (selected_id is not None) and (row['id'] == selected_id)
+
         # Color logic: Red (High Urgency) to Green (Low Urgency)
         color = 'red' if row['urgency_score'] > 50 else 'green'
 
@@ -75,14 +76,17 @@ def render_map(processed_data, center_coords=None, zoom=14):
         <b>Notes:</b> {notes}
         """
 
+        # Create Popup with show=True if this is the selected citizen
+        popup = folium.Popup(popup_html, max_width=250, show=is_selected)
+
         folium.CircleMarker(
             location=[row['lat'], row['lon']],
-            radius=5,
-            color=color,
+            radius=8 if is_selected else 5, # Make selected marker slightly larger
+            color='blue' if is_selected else color, # Highlight selection with specific color
             fill=True,
-            fill_color=color,
-            fill_opacity=0.7,
-            popup=folium.Popup(popup_html, max_width=250),
+            fill_color='blue' if is_selected else color,
+            fill_opacity=0.9 if is_selected else 0.7,
+            popup=popup,
             tooltip=f"{fullname} ({row['id']})"
         ).add_to(m)
 
@@ -115,9 +119,19 @@ def render_citizen_list(full_data, selected_id=None):
 
     display_df = full_data[available_cols].copy()
 
+    # Apply Highlight Style if selected_id is present
+    def highlight_selected(row):
+        if selected_id is not None and row['id'] == selected_id:
+            # Using a distinct color for selection (e.g. dark blue background with white text)
+            return ['background-color: #1f77b4; color: white; font-weight: bold'] * len(row)
+        return [''] * len(row)
+
+    # Note: st.dataframe supports styled dataframes
+    styled_df = display_df.style.apply(highlight_selected, axis=1)
+
     # Return the selection event
     return st.dataframe(
-        display_df,
+        styled_df,
         use_container_width=True,
         hide_index=True,
         selection_mode="single-row",

@@ -78,20 +78,21 @@ with col_map:
     map_data = render_map(
         processed_data,
         center_coords=st.session_state.map_center,
-        zoom=st.session_state.zoom
+        zoom=st.session_state.zoom,
+        selected_id=st.session_state.selected_citizen_id
     )
 
     # Handle Map Clicks (Map -> List)
-    if map_data['last_object_clicked_popup']:
-        # Extract ID from popup text if possible, or use lat/lon matching
-        # Popup format is HTML, but tooltip usually has ID.
-        # Easier: Find closest citizen to clicked lat/lon
+    # We check if 'last_object_clicked' is available and valid
+    if map_data.get('last_object_clicked'):
         click_lat = map_data['last_object_clicked']['lat']
         click_lon = map_data['last_object_clicked']['lng']
 
-        # Simple exact match check (or very close)
-        # Note: Folium might return slightly different precision
-        # Let's search for exact match first
+        # Find closest citizen to clicked lat/lon
+        # Using a small tolerance (e.g. 0.0001 degrees) or exact match
+        # Since we use CircleMarkers, the click should be exact coordinate of the marker center
+        # (folium usually returns the marker's lat/lon if clicked ON the marker)
+
         match = processed_data[
             (processed_data['lat'] == click_lat) &
             (processed_data['lon'] == click_lon)
@@ -99,6 +100,7 @@ with col_map:
 
         if not match.empty:
             clicked_id = match.iloc[0]['id']
+            # Only update if it's different to avoid loops, AND allow re-clicking to confirm
             if st.session_state.selected_citizen_id != clicked_id:
                 st.session_state.selected_citizen_id = clicked_id
                 st.rerun()
