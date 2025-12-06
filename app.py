@@ -1,7 +1,7 @@
 import streamlit as st
 from src.config import PAGE_CONFIG, CUSTOM_CSS
 from src.data import DataManager
-from src.logic import calculate_urgency_score
+from src.logic import apply_ranking_logic
 from src.ui import render_sidebar, render_header, render_map, render_citizen_list
 from src.ai import AIAssistant
 import pandas as pd
@@ -46,10 +46,8 @@ def get_data():
 
 raw_data = get_data()
 # Pass None for fire sim coords as they are disabled
-processed_data = calculate_urgency_score(raw_data, None, None)
-
-# Sort by Urgency Score (Highest to Lowest)
-processed_data = processed_data.sort_values(by='urgency_score', ascending=False)
+processed_data = apply_ranking_logic(raw_data)
+# Sorting is already handled in apply_ranking_logic
 
 # -----------------------------------------------------------------------------
 # 4. LAYOUT & INTERACTION

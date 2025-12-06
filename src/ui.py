@@ -110,7 +110,8 @@ def render_citizen_list(full_data, selected_id=None, widget_key="citizen_list"):
             st.info(f"🎯 **Selected:** {row.get('fullname', row['id'])} | Urgency: {int(row['urgency_score'])}")
 
     # 2. Prepare Data
-    cols = ['id', 'fullname', 'urgency_score', 'danger_level', 'life_support']
+    # Added 'risk_category' to display list
+    cols = ['id', 'fullname', 'risk_category', 'life_support']
     available_cols = [c for c in cols if c in full_data.columns]
     display_df = full_data[available_cols].copy()
 

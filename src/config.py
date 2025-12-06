@@ -24,6 +24,9 @@ AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
 AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-preview")
 AZURE_OPENAI_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4o")
 
+# Ranking API
+RANKING_API_URL = os.getenv("RANKING_API_URL", "https://backendranking-bjfyb4esg3exbybq.westeurope-01.azurewebsites.net/api/rank_citizens")
+
 # Custom CSS
 CUSTOM_CSS = """
 <style>
