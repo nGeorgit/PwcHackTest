@@ -34,6 +34,9 @@ if "selected_citizen_id" not in st.session_state:
 if 'list_widget_key' not in st.session_state:
     st.session_state.list_widget_key = 0
 
+if "dataframe_key" not in st.session_state:
+    st.session_state.dataframe_key = 0
+
 # -----------------------------------------------------------------------------
 # 3. DATA LOADING & PROCESSING
 # -----------------------------------------------------------------------------

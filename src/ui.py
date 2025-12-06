@@ -22,7 +22,6 @@ def render_chat_interface(messages):
 def render_sidebar(messages):
     """Renders the sidebar controls (now primarily Chat) and returns the chat prompt."""
     st.sidebar.header("🚒 Operation Controls")
-    # Routes checkbox removed as requested
 
     # Render Chat Interface
     return render_chat_interface(messages)
@@ -44,6 +43,7 @@ def render_map(processed_data, center_coords=None, zoom=14, selected_id=None):
         processed_data: Dataframe containing citizen data.
         center_coords: Tuple (lat, lon) to center the map.
         zoom: Initial zoom level.
+        selected_id: ID of the citizen to automatically open the popup for.
 
     Returns:
         The clicked object from st_folium.
@@ -51,14 +51,15 @@ def render_map(processed_data, center_coords=None, zoom=14, selected_id=None):
     st.subheader("📍 Live Tactical Map")
 
     # Initialize Map
-    # Default center if none provided
     if center_coords is None:
         center_coords = [38.049498421610664, 23.98779210235504]
 
     m = folium.Map(location=center_coords, zoom_start=zoom)
 
-    # Layer 1: The People (Scatterplot equivalent)
+    # Layer 1: The People
     for _, row in processed_data.iterrows():
+        is_selected = (selected_id is not None) and (row['id'] == selected_id)
+
         # Color logic: Red (High Urgency) to Green (Low Urgency)
         color = 'red' if row['urgency_score'] > 50 else 'green'
 
@@ -77,10 +78,13 @@ def render_map(processed_data, center_coords=None, zoom=14, selected_id=None):
         <b>Notes:</b> {notes}
         """
 
+        # Create Popup with show=True if this is the selected citizen
+        popup = folium.Popup(popup_html, max_width=250, show=is_selected)
+
         folium.CircleMarker(
             location=[row['lat'], row['lon']],
-            radius=5,
-            color=color,
+            radius=8 if is_selected else 5, # Make selected marker slightly larger
+            color='blue' if is_selected else color, # Highlight selection with specific color
             fill=True,
             fill_color=color,
             fill_opacity=0.7,
