@@ -5,10 +5,7 @@ import json
 class DataManager:
     @staticmethod
     def load_vulnerable_citizens(n=50, center_lat=40.6401, center_lon=22.9444):
-        """
-        Generates fake data for Thessaloniki (or target area).
-        Features: Age, Moving Ability (0-10), Chronic Disease (Boolean).
-        """
+
         data = []
         for i in range(n):
             # Random location around center
