@@ -61,7 +61,12 @@ def render_map(processed_data, center_coords=None, zoom=14, selected_id=None):
         is_selected = (selected_id is not None) and (row['id'] == selected_id)
 
         # Color logic: Red (High Urgency) to Green (Low Urgency)
-        color = 'red' if row['urgency_score'] > 50 else 'green'
+        if row['risk_category'] == 'CRITICAL':
+            color = 'red'
+        elif row['risk_category'] == 'HIGH':
+            color = 'orange'
+        else:
+            color = 'green'
 
         # Helper to safely get life_support
         life_support = "Yes" if row.get('life_support', 0) == 1 else "No"
