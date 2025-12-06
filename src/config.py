@@ -18,6 +18,12 @@ DEFAULT_LON = float(os.getenv("DEFAULT_LON", 22.9444))
 RESCUER_LAT = float(os.getenv("RESCUER_LAT", 38.0417850)) 
 RESCUER_LON = float(os.getenv("RESCUER_LON", 23.995306))
 
+# Azure OpenAI Configuration
+AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY", "9nQ1ghWBu469MydZONFzeWknZoVovHuHraxO94rTYpHhTKrgTKh8JQQJ99BLACYeBjFXJ3w3AAABACOGKYDv")
+AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT", "https://aigisagent.openai.azure.com/openai/v1")
+AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-preview")
+AZURE_OPENAI_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4o")
+
 # Custom CSS
 CUSTOM_CSS = """
 <style>
