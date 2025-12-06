@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import json
 
 class DataManager:
     @staticmethod
@@ -30,3 +31,28 @@ class DataManager:
                 "oxygen_level": oxygen_sensor
             })
         return pd.DataFrame(data)
+
+    @staticmethod
+    def load_data_from_json(filepath):
+        """
+        Loads data from a specific JSON file structure.
+        Expected fields: id, fullname, coordinates(lat, lon), gender, life_support,
+        vulnerability_score, notes, present, distance_from_danger, danger_level
+        """
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+
+            # Flatten coordinates
+            processed_data = []
+            for item in data:
+                entry = item.copy()
+                coords = entry.pop('coordinates', {})
+                entry['lat'] = coords.get('lat')
+                entry['lon'] = coords.get('lon')
+                processed_data.append(entry)
+
+            return pd.DataFrame(processed_data)
+        except Exception as e:
+            print(f"Error loading JSON data: {e}")
+            return pd.DataFrame()

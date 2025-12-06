@@ -7,9 +7,11 @@ def render_sidebar():
     """Renders the sidebar controls and returns the configuration values."""
     st.sidebar.header("🚒 Operation Controls")
     show_routes = st.sidebar.checkbox("Show Rescue Routes", value=True)
-    fire_sim_lat = st.sidebar.slider("Fire Latitude", 40.6300, 40.6500, 40.6401)
-    fire_sim_lon = st.sidebar.slider("Fire Longitude", 22.9300, 22.9600, 22.9444)
-    return show_routes, fire_sim_lat, fire_sim_lon
+    # Fire simulation sliders commented out
+    # fire_sim_lat = st.sidebar.slider("Fire Latitude", 40.6300, 40.6500, 40.6401)
+    # fire_sim_lon = st.sidebar.slider("Fire Longitude", 22.9300, 22.9600, 22.9444)
+    # Returning None for fire coordinates since they are unused
+    return show_routes, None, None
 
 def render_header():
     """Renders the main header."""
@@ -27,21 +29,35 @@ def render_map(processed_data, fire_sim_lat, fire_sim_lon, rescuer_lat, rescuer_
     # Initialize Map centered at the fire (or generic center)
     m = folium.Map(location=[38.049498421610664, 23.98779210235504], zoom_start=14)
 
-    # Layer 2: The Fire (Heatmap/Circle)
-    folium.Circle(
-        location=[fire_sim_lat, fire_sim_lon],
-        radius=400, # Fire radius in meters
-        color="orangered",
-        fill=True,
-        fill_color="orangered",
-        fill_opacity=0.4,
-        tooltip="Fire Zone"
-    ).add_to(m)
+    # Layer 2: The Fire (Heatmap/Circle) - Commented out
+    # if fire_sim_lat is not None and fire_sim_lon is not None:
+    #     folium.Circle(
+    #         location=[fire_sim_lat, fire_sim_lon],
+    #         radius=400, # Fire radius in meters
+    #         color="orangered",
+    #         fill=True,
+    #         fill_color="orangered",
+    #         fill_opacity=0.4,
+    #         tooltip="Fire Zone"
+    #     ).add_to(m)
 
     # Layer 1: The People (Scatterplot equivalent)
     for _, row in processed_data.iterrows():
         # Color logic: Red (High Urgency) to Green (Low Urgency)
         color = 'red' if row['urgency_score'] > 50 else 'green'
+
+        # Helper to safely get life_support
+        life_support = "Yes" if row.get('life_support', 0) == 1 else "No"
+        notes = row.get('notes', 'N/A')
+        fullname = row.get('fullname', 'Unknown')
+
+        popup_html = f"""
+        <b>ID:</b> {row['id']}<br>
+        <b>Name:</b> {fullname}<br>
+        <b>Urgency:</b> {int(row['urgency_score'])}<br>
+        <b>Life Support:</b> {life_support}<br>
+        <b>Notes:</b> {notes}
+        """
 
         folium.CircleMarker(
             location=[row['lat'], row['lon']],
@@ -50,28 +66,9 @@ def render_map(processed_data, fire_sim_lat, fire_sim_lon, rescuer_lat, rescuer_
             fill=True,
             fill_color=color,
             fill_opacity=0.7,
-            popup=folium.Popup(f"ID: {row['id']}<br>Urgency: {int(row['urgency_score'])}", max_width=200),
-            tooltip=f"{row['id']}"
+            popup=folium.Popup(popup_html, max_width=250),
+            tooltip=f"{fullname} ({row['id']})"
         ).add_to(m)
-
-    # # Layer 3: The Rescuer
-    # folium.Marker(
-    #     location=[rescuer_lat, rescuer_lon],
-    #     popup="Rescuer Unit",
-    #     tooltip="Rescuer",
-    #     icon=folium.Icon(color="blue", icon="ambulance", prefix='fa')
-    # ).add_to(m)
-
-    # Layer 4: Routing (Lines from Rescuer to High Urgency Targets)
-    # if show_routes:
-    #     for _, row in top_priorities.iterrows():
-    #         folium.PolyLine(
-    #             locations=[[rescuer_lat, rescuer_lon], [row['lat'], row['lon']]],
-    #             color="yellow",
-    #             weight=5,
-    #             opacity=0.8,
-    #             tooltip=f"Route to {row['id']}"
-    #         ).add_to(m)
 
     # Render Map using streamlit-folium
     st_folium(m, width=None, height=500)
@@ -81,13 +78,18 @@ def render_priority_list(top_priorities, full_data):
     st.subheader("📋 Priority Extraction List")
     # Display the top targets nicely
     for i, row in top_priorities.iterrows():
+        life_support = "Yes" if row.get('life_support', 0) == 1 else "No"
         with st.container():
-            st.warning(f"🚨 **{row['id']}** | Urgency: {int(row['urgency_score'])}/100")
-            st.write(f"Age: {row['age']} | Mobility: {row['mobility']}/10 | Disease: {row['has_disease']}")
+            st.warning(f"🚨 **{row.get('fullname', row['id'])}** | Urgency: {int(row['urgency_score'])}/100")
+            st.write(f"Life Support: {life_support} | Notes: {row.get('notes', '-')}")
             st.progress(int(row['urgency_score']))
 
     with st.expander("View Full Database"):
-        st.dataframe(full_data[['id', 'age', 'mobility', 'has_disease', 'urgency_score']])
+        # Select columns that exist in the dataframe
+        cols = ['id', 'fullname', 'life_support', 'danger_level', 'urgency_score', 'notes']
+        # Filter cols to only those present in full_data to avoid errors if something is missing
+        available_cols = [c for c in cols if c in full_data.columns]
+        st.dataframe(full_data[available_cols])
 
 def render_chat_interface(messages, on_submit):
     """
@@ -96,9 +98,6 @@ def render_chat_interface(messages, on_submit):
     Args:
         messages: List of message dicts {"role": "...", "content": "..."}
         on_submit: Callback function when user submits input.
-                   NOTE: In Streamlit's simple model, we usually handle this
-                   outside the function by returning the input or checking chat_input.
-                   Here we just render the history and the input box.
     """
     st.subheader("🤖 AI Mission Support")
 

@@ -4,6 +4,7 @@ from src.data import DataManager
 from src.logic import calculate_urgency_score
 from src.ui import render_sidebar, render_header, render_map, render_priority_list, render_chat_interface
 from src.ai import AIAssistant
+import os
 
 # -----------------------------------------------------------------------------
 # 1. CONFIGURATION & PAGE SETUP
@@ -22,12 +23,10 @@ show_routes, fire_sim_lat, fire_sim_lon = render_sidebar()
 render_header()
 
 # Data Loading & Processing
-# Using cache_data decorator on a wrapper function or using session state is common.
-# Since DataManager is static, we can wrap the call to use streamlit's cache.
-#I have set some cortnates of mati [38.049498421610664, 23.98779210235504]
 @st.cache_data
 def get_data():
-    return DataManager.load_vulnerable_citizens(center_lat=38.049498421610664, center_lon=23.98779210235504)
+    # Load from the specific JSON file
+    return DataManager.load_data_from_json('dummy_data/dataset_250_final.json')
 
 raw_data = get_data()
 processed_data = calculate_urgency_score(raw_data, fire_sim_lat, fire_sim_lon)
@@ -56,10 +55,10 @@ with col2:
     # Chat Logic using Session State
     if "messages" not in st.session_state:
         st.session_state.messages = []
-        # Initial greeting
+        # Initial greeting - updated to reflect new mode (no fire sim)
         st.session_state.messages.append({
             "role": "assistant", 
-            "content": f"Briefing: Fire detected at {fire_sim_lat:.4f}, {fire_sim_lon:.4f}. I have analyzed sensor data. {len(top_priorities)} critical targets identified requiring immediate evacuation based on mobility and proximity. Awaiting instructions."
+            "content": f"Briefing: Vulnerable population data loaded. {len(top_priorities)} critical targets identified based on danger levels. Awaiting instructions."
         })
 
     # Render Interface and capture input
@@ -68,15 +67,6 @@ with col2:
     if prompt:
         # Add User Message
         st.session_state.messages.append({"role": "user", "content": prompt})
-        # Force a rerun to display the user message immediately isn't strictly necessary
-        # as the next loop handles it, but st.chat_input behaves uniquely.
-        # We need to manually append and rerun or just display it.
-        # Standard pattern is: if prompt, append, then generate response.
-
-        # We need to redisplay the user message because `render_chat_interface`
-        # was called *before* we appended the new message.
-        # Alternatively, we can rely on the rerun that happens on interaction,
-        # but let's just create the response now.
 
         context_data = {
             "top_target_id": top_priorities.iloc[0]['id'],
