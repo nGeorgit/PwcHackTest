@@ -1,8 +1,10 @@
+import streamlit as st
 import numpy as np
 import requests
 import pandas as pd
 from src.config import RANKING_API_URL
 
+@st.cache_data
 def fetch_rankings_from_api():
     """
     Fetches ranking data from the external Azure Function API.
@@ -11,6 +13,7 @@ def fetch_rankings_from_api():
     try:
         response = requests.get(RANKING_API_URL, timeout=10)
         response.raise_for_status()
+        print("Successfully fetched rankings from API.")
         return response.json()
     except Exception as e:
         print(f"Error fetching rankings: {e}")
