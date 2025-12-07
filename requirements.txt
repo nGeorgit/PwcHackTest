@@ -8,3 +8,4 @@ folium
 streamlit-folium
 requests
 azure-storage-blob
+azure-cognitiveservices-speech

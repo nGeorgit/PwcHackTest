@@ -61,22 +61,25 @@ processed_data = apply_ranking_logic(raw_data)
 
 # --- Sidebar (Chat) ---
 # render_sidebar now handles chat rendering and input
-prompt = render_sidebar(st.session_state.messages)
 
-if prompt:
-    st.session_state.messages.append({"role": "user", "content": prompt})
+# --- Helper Function for AI Processing ---
+def process_message(user_text):
+    """
+    Handles the logic for User Input -> Context Retrieval -> AI Response
+    """
+    # 1. Append User Message to History
+    st.session_state.messages.append({"role": "user", "content": user_text})
 
-    # Context for AI
-    # 1. Selected Citizen
+    # 2. Context for AI (Reused your logic here)
     selected_citizen = None
-    # Safer access to session_state
     current_selected_id = st.session_state.get('selected_citizen_id')
+    
+    # Assuming 'processed_data' is available here (global or session_state)
     if current_selected_id is not None:
         sel_row = processed_data[processed_data['id'] == current_selected_id]
         if not sel_row.empty:
             selected_citizen = sel_row.iloc[0].to_dict()
 
-    # 2. Top Urgent Cases (Top 5)
     top_urgent_citizens = processed_data.head(5).to_dict('records')
 
     context_data = {
@@ -85,10 +88,22 @@ if prompt:
         "top_urgent_citizens": top_urgent_citizens
     }
 
-    response_text = AIAssistant.get_response(prompt, context_data)
+    # 3. Get AI Response
+    response_text = AIAssistant.get_response(user_text, context_data)
+    
+    # 4. Append Assistant Message
     st.session_state.messages.append({"role": "assistant", "content": response_text})
-    st.rerun()
 
+# 1. Render the Sidebar
+# This function now handles the UI, the Voice Input, AND returns the Text Input.
+sidebar_prompt = render_sidebar(st.session_state.messages, on_voice_input=process_message)
+
+# 2. Check if the user typed something in the Sidebar
+if sidebar_prompt:
+    # Trigger the same logic used for voice
+    process_message(sidebar_prompt)
+    st.rerun()
+    
 # --- Main Area ---
 render_header()
 
@@ -138,35 +153,7 @@ with col_map:
                 st.session_state.list_widget_key += 1
                 st.rerun()
 
-# with col_map:
-#     # Render Map and capture click events
-#     map_data = render_map(
-#         processed_data,
-#         center_coords=st.session_state.map_center,
-#         zoom=st.session_state.zoom
-#     )
 
-#     # Handle Map Clicks (Map -> List)
-#     if map_data['last_object_clicked_popup']:
-#         # Extract ID from popup text if possible, or use lat/lon matching
-#         # Popup format is HTML, but tooltip usually has ID.
-#         # Easier: Find closest citizen to clicked lat/lon
-#         click_lat = map_data['last_object_clicked']['lat']
-#         click_lon = map_data['last_object_clicked']['lng']
-
-#         # Simple exact match check (or very close)
-#         # Note: Folium might return slightly different precision
-#         # Let's search for exact match first
-#         match = processed_data[
-#             (processed_data['lat'] == click_lat) &
-#             (processed_data['lon'] == click_lon)
-#         ]
-
-#         if not match.empty:
-#             clicked_id = match.iloc[0]['id']
-#             if st.session_state.selected_citizen_id != clicked_id:
-#                 st.session_state.selected_citizen_id = clicked_id
-#                 st.rerun()
 
 with col_list:
     # Generate a unique key string based on the counter

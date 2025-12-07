@@ -30,6 +30,10 @@ RANKING_API_URL = os.getenv("RANKING_API_URL")
 # Azure Blob Storage Connection String
 STORAGE_CONN_STRING = os.getenv("STORAGE_CONN_STRING")
 
+# Azure Speech Service Configuration
+SPEECH_KEY = os.getenv("SPEECH_KEY")
+SPEECH_REGION = os.getenv("SPEECH_REGION")
+
 # Custom CSS
 CUSTOM_CSS = """
 <style>
