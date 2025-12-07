@@ -59,7 +59,7 @@ class TestData(unittest.TestCase):
         # Test new JSON loading method using the existing dummy data
         json_path = 'dummy_data/dataset_250_final.json'
         if os.path.exists(json_path):
-            df = DataManager.load_data_from_json(json_path)
+            df = DataManager.load_data_from_local_json(json_path)
             self.assertFalse(df.empty)
             self.assertIn('lat', df.columns)
             self.assertIn('lon', df.columns)

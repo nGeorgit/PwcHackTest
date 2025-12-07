@@ -7,3 +7,4 @@ python-dotenv
 folium
 streamlit-folium
 requests
+azure-storage-blob

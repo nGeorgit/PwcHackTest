@@ -25,7 +25,10 @@ AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-pre
 AZURE_OPENAI_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4o")
 
 # Ranking API
-RANKING_API_URL = os.getenv("RANKING_API_URL", "https://backendranking-bjfyb4esg3exbybq.westeurope-01.azurewebsites.net/api/rank_citizens")
+RANKING_API_URL = os.getenv("RANKING_API_URL")
+
+# Azure Blob Storage Connection String
+STORAGE_CONN_STRING = os.getenv("STORAGE_CONN_STRING")
 
 # Custom CSS
 CUSTOM_CSS = """

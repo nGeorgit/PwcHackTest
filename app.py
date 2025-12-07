@@ -42,7 +42,8 @@ if "dataframe_key" not in st.session_state:
 # -----------------------------------------------------------------------------
 @st.cache_data
 def get_data():
-    return DataManager.load_data_from_json('dummy_data/dataset_250_final.json')
+    # return DataManager.load_data_from_local_json('dummy_data/dataset_250_final.json')
+    return DataManager.load_citizen_data_from_blob()
 
 raw_data = get_data()
 # Pass None for fire sim coords as they are disabled
