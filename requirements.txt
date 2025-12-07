@@ -1,11 +1,12 @@
 streamlit
 pandas
 numpy
-openai
+openai==2.9.0
 watchdog
 python-dotenv
 folium
 streamlit-folium
 requests
-azure-storage-blob
-azure-cognitiveservices-speech
+azure-storage-blob==12.27.1
+azure-cognitiveservices-speech==1.47.0
+azure-core==1.36.0
