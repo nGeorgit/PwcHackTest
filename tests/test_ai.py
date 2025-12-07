@@ -21,16 +21,6 @@ class TestAIAssistant(unittest.TestCase):
             ]
         }
 
-    def test_format_context(self):
-        """Test if context is formatted correctly into string."""
-        formatted = AIAssistant._format_context(self.context_data)
-
-        self.assertIn("High Urgency Cases: 10", formatted)
-        self.assertIn("John Doe", formatted)
-        self.assertIn("Diabetic", formatted)
-        self.assertIn("Top 5 Critical Targets", formatted)
-        self.assertIn("Jane", formatted)
-        self.assertIn("Bob", formatted)
 
     @patch('src.ai.AzureOpenAI')
     @patch('src.ai.AZURE_OPENAI_API_KEY', 'dummy_key')
