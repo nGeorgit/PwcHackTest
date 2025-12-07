@@ -1,30 +1,88 @@
 import folium
 from streamlit_folium import st_folium
+from src.speech import recognize_speech
 import pandas as pd
 import streamlit as st
 
-def render_chat_interface(messages):
+def render_chat_interface(messages, on_voice_input=None):
     """
-    Renders the chat interface.
-
-    Args:
-        messages: List of message dicts {"role": "...", "content": "..."}
+    Renders the chat interface. 
+    Uses a placeholder to clear the 'Review' UI immediately upon clicking Retry.
     """
     st.sidebar.subheader("🤖 AI Mission Support")
 
-    # Display chat history
+  
+        
+    # 1. Initialize draft state
+    if "voice_draft" not in st.session_state:
+        st.session_state.voice_draft = None
+
+    # 2. Display Chat History
     for message in messages:
         with st.sidebar.chat_message(message["role"]):
             st.sidebar.markdown(message["content"])
 
+
+    # 3. Voice Input Logic
+    
+    # CASE A: No draft -> Show Start Button
+    if st.session_state.voice_draft is None:
+        if st.sidebar.button("Start Voice Input"):
+            voice_input = recognize_speech()
+            if voice_input:
+                st.session_state.voice_draft = voice_input
+                st.rerun()
+
+    # CASE B: Draft exists -> Show Review Controls
+    else:
+        # Create a PLACEHOLDER. This is the magic box we can empty later.
+        review_ui = st.sidebar.empty()
+
+        # Render the Review UI *inside* the placeholder container
+        with review_ui.container():
+            st.info(f"**Review:** \"{st.session_state.voice_draft}\"")
+            col1, col2 = st.columns(2)
+            
+            # We assign the button clicks to variables
+            send_clicked = col1.button("Send", use_container_width=True)
+            retry_clicked = col2.button("Retry", use_container_width=True)
+
+        # --- LOGIC HANDLING ---
+        
+        if send_clicked:
+            if on_voice_input:
+                on_voice_input(st.session_state.voice_draft)
+                st.session_state.voice_draft = None
+                st.rerun()
+
+        if retry_clicked:
+            # 1. VISUAL TRICK: Clear the Review UI (text & buttons) immediately!
+            review_ui.empty()
+            
+            # 2. NOW listen. The 'Review' box is gone, so the 'Listening' status 
+            #    (from speech.py) will appear clearly, just like the first time.
+            new_voice_input = recognize_speech()
+            
+            # 3. Update the draft with the new attempt
+            if new_voice_input:
+                st.session_state.voice_draft = new_voice_input
+            else:
+                # If they stayed silent or canceled, reset to the beginning
+                st.session_state.voice_draft = None
+                
+            st.rerun()
+    if "last_audio" in st.session_state and st.session_state.last_audio:
+            st.sidebar.audio(st.session_state.last_audio, format="audio/wav")
     return st.sidebar.chat_input("Ask about the situation...")
 
-def render_sidebar(messages):
-    """Renders the sidebar controls (now primarily Chat) and returns the chat prompt."""
+def render_sidebar(messages, on_voice_input=None):
+    """Renders the sidebar controls."""
     st.sidebar.header("🚒 Operation Controls")
+    
+    # Pass the callback down
+    return render_chat_interface(messages, on_voice_input)
 
-    # Render Chat Interface
-    return render_chat_interface(messages)
+
 
 def render_header():
     """Renders the main header."""
@@ -56,7 +114,36 @@ def render_map(processed_data, fire_df, center_coords=None, zoom=14, selected_id
 
     m = folium.Map(location=center_coords, zoom_start=zoom)
 
-    # Layer 1: The People
+        # Layer 1: Fire Location
+    for fire_id, fire_group in fire_df.groupby('fire_id'):
+            
+
+            # Extract the list of coordinates [[lat, lon], [lat, lon]] for this polygon
+            locations = fire_group[['lat', 'lon']].values.tolist()
+
+            # Visual Logic: Fire is usually Red. 
+            # If selected, we make the border thicker and opacity higher to make it pop.
+            color = "#DA101090"  # Dark Red for border
+            fill_color = 'red' # Standard Red for fill
+           
+         
+
+            popup_html = f"""
+            <b>Fire Zone ID:</b> {fire_id}<br>
+            <b>Type:</b> Active Perimeter<br>
+            <b>Vertices:</b> {len(locations)}
+            """
+
+            folium.Polygon(
+                locations=locations,
+                color=color,
+                fill=True,
+                fill_color=fill_color,
+                # popup=folium.Popup(popup_html, max_width=200, show=is_selected_fire),
+                # tooltip=f"Fire Zone {fire_id}"
+            ).add_to(m)
+
+    # Layer 2: The People
     for _, row in processed_data.iterrows():
         if row['present'] == 0:
             continue  # Skip non-present citizens
@@ -99,34 +186,7 @@ def render_map(processed_data, fire_df, center_coords=None, zoom=14, selected_id
             tooltip=f"{fullname} ({row['id']})"
         ).add_to(m)
         
-    # Layer 2: Fire Location
-    for fire_id, fire_group in fire_df.groupby('fire_id'):
-            
 
-            # Extract the list of coordinates [[lat, lon], [lat, lon]] for this polygon
-            locations = fire_group[['lat', 'lon']].values.tolist()
-
-            # Visual Logic: Fire is usually Red. 
-            # If selected, we make the border thicker and opacity higher to make it pop.
-            color = "#DA101090"  # Dark Red for border
-            fill_color = 'red' # Standard Red for fill
-           
-         
-
-            popup_html = f"""
-            <b>Fire Zone ID:</b> {fire_id}<br>
-            <b>Type:</b> Active Perimeter<br>
-            <b>Vertices:</b> {len(locations)}
-            """
-
-            folium.Polygon(
-                locations=locations,
-                color=color,
-                fill=True,
-                fill_color=fill_color,
-                # popup=folium.Popup(popup_html, max_width=200, show=is_selected_fire),
-                # tooltip=f"Fire Zone {fire_id}"
-            ).add_to(m)
 
     # Render Map using streamlit-folium with maximized size
     return st_folium(m, use_container_width=True, height=700)
