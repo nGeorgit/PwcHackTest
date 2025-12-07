@@ -60,7 +60,7 @@ class DataManager:
         """
         Loads citizen data JSON from Azure Blob Storage.
         """
-        json_data = fetch_json_from_blob("dataset_250_final.json")
+        json_data = fetch_json_from_blob("dataset_250_Domatia.json")
         if not json_data:
             return pd.DataFrame()
 
@@ -81,7 +81,7 @@ class DataManager:
         Loads fire polygon data JSON from Azure Blob Storage.
         Each entry in the JSON represents a distinct fire polygon consisting of coordinate points.
         """
-        json_data = fetch_json_from_blob("fire.json")
+        json_data = fetch_json_from_blob("fire2.json")
         if not json_data:
             return pd.DataFrame()
 
