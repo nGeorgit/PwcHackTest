@@ -81,12 +81,15 @@ def process_message(user_text):
         if not sel_row.empty:
             selected_citizen = sel_row.iloc[0].to_dict()
 
-    top_urgent_citizens = processed_data.head(5).to_dict('records')
+    
+    #from processed_data remove urgency_score
+    processed_data_sanitized = processed_data.drop(columns=['urgency_score'], errors='ignore')
 
     context_data = {
-        "high_risk_count": len(processed_data[processed_data['urgency_score'] > 70]),
+        # "high_risk_count": len(processed_data[processed_data['urgency_score'] > 70]),
         "selected_citizen": selected_citizen,
-        "top_urgent_citizens": top_urgent_citizens
+        "raw_citizen_data": raw_data.to_dict(orient='records'),
+        "processed_data": processed_data_sanitized.to_dict(orient='records')
     }
 
     # 3. Get AI Response
