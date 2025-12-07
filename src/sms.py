@@ -43,7 +43,7 @@ def send_infobip_sms(recipients, message_text, sender_name="Hackathon"):
         
         # Έλεγχος επιτυχίας (Status Code 200 OK)
         if response.status_code == 200:
-            print(f"✅ SMS sent successfully to {recipient}!")
+            print(f"✅ SMS sent successfully to {recipients}!")
             return response.json()
         else:
             print(f"❌ Error sending SMS. Status: {response.status_code}")
