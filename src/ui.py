@@ -58,6 +58,8 @@ def render_map(processed_data, fire_df, center_coords=None, zoom=14, selected_id
 
     # Layer 1: The People
     for _, row in processed_data.iterrows():
+        if row['present'] == 0:
+            continue  # Skip non-present citizens
         is_selected = (selected_id is not None) and (row['id'] == selected_id)
 
         # Color logic: Red (High Urgency) to Green (Low Urgency)
@@ -132,24 +134,34 @@ def render_map(processed_data, fire_df, center_coords=None, zoom=14, selected_id
 def render_citizen_list(full_data, selected_id=None, widget_key="citizen_list"):
     """
     Renders the citizen list as a selectable dataframe with visual highlighting.
-    Now accepts a 'widget_key' to force-reset the selection state when needed.
+    Filters out citizens who are not present (present == 0).
     """
-    st.subheader("📋 Priority List")
+    st.subheader("Citizens")
 
     # 1. Detail View
+    # We use full_data here to ensure we can still see details of a selected person 
+    # even if they just became "not present" in the latest update.
     if selected_id is not None:
         selected_row = full_data[full_data['id'] == selected_id]
         if not selected_row.empty:
             row = selected_row.iloc[0]
             st.info(f"🎯 **Selected:** {row.get('fullname', row['id'])} | Urgency: {int(row['urgency_score'])}")
 
-    # 2. Prepare Data
-    # Added 'risk_category' to display list
-    cols = ['id', 'fullname', 'risk_category', 'life_support']
-    available_cols = [c for c in cols if c in full_data.columns]
-    display_df = full_data[available_cols].copy()
+    # --- FILTERING LOGIC START ---
+    # Create a new dataframe for the list view that excludes non-present citizens
+    if 'present' in full_data.columns:
+        list_source = full_data[full_data['present'] != 0].copy()
+    else:
+        list_source = full_data.copy()
+    # --- FILTERING LOGIC END ---
 
-    # 3. Define the Highlighter Logic (Yellow background for selected ID)
+    # 2. Prepare Data
+    cols = ['id', 'fullname', 'risk_category', 'life_support']
+    # Ensure we use list_source here, not full_data
+    available_cols = [c for c in cols if c in list_source.columns]
+    display_df = list_source[available_cols].copy()
+
+    # 3. Define the Highlighter Logic
     def highlight_selected(row):
         if selected_id is not None and row['id'] == selected_id:
             return ['background-color: #ffffb3; color: black'] * len(row)
@@ -159,7 +171,6 @@ def render_citizen_list(full_data, selected_id=None, widget_key="citizen_list"):
     styled_df = display_df.style.apply(highlight_selected, axis=1)
 
     # 5. Render with Dynamic Key
-    # The 'key' parameter is what allows us to clear the checkbox from the outside!
     return st.dataframe(
         styled_df,
         use_container_width=True,
@@ -167,5 +178,5 @@ def render_citizen_list(full_data, selected_id=None, widget_key="citizen_list"):
         selection_mode="single-row",
         on_select="rerun",
         height=600,
-        key=widget_key # <--- CRITICAL UPDATE
+        key=widget_key
     )
