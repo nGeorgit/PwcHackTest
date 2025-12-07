@@ -35,7 +35,7 @@ def render_header():
     with col_head2:
         st.metric(label="System Status", value="ACTIVE", delta="CRITICAL ALERT")
 
-def render_map(processed_data, center_coords=None, zoom=14, selected_id=None):
+def render_map(processed_data, fire_df, center_coords=None, zoom=14, selected_id=None):
     """
     Renders the Folium map.
 
@@ -96,6 +96,35 @@ def render_map(processed_data, center_coords=None, zoom=14, selected_id=None):
             popup=folium.Popup(popup_html, max_width=250, show=should_show),
             tooltip=f"{fullname} ({row['id']})"
         ).add_to(m)
+        
+    # Layer 2: Fire Location
+    for fire_id, fire_group in fire_df.groupby('fire_id'):
+            
+
+            # Extract the list of coordinates [[lat, lon], [lat, lon]] for this polygon
+            locations = fire_group[['lat', 'lon']].values.tolist()
+
+            # Visual Logic: Fire is usually Red. 
+            # If selected, we make the border thicker and opacity higher to make it pop.
+            color = "#DA101090"  # Dark Red for border
+            fill_color = 'red' # Standard Red for fill
+           
+         
+
+            popup_html = f"""
+            <b>Fire Zone ID:</b> {fire_id}<br>
+            <b>Type:</b> Active Perimeter<br>
+            <b>Vertices:</b> {len(locations)}
+            """
+
+            folium.Polygon(
+                locations=locations,
+                color=color,
+                fill=True,
+                fill_color=fill_color,
+                # popup=folium.Popup(popup_html, max_width=200, show=is_selected_fire),
+                # tooltip=f"Fire Zone {fire_id}"
+            ).add_to(m)
 
     # Render Map using streamlit-folium with maximized size
     return st_folium(m, use_container_width=True, height=700)

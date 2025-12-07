@@ -74,3 +74,27 @@ class DataManager:
             processed_data.append(entry)
 
         return pd.DataFrame(processed_data)
+    
+    @staticmethod
+    def load_fire_data_from_blob():
+        """
+        Loads fire polygon data JSON from Azure Blob Storage.
+        Each entry in the JSON represents a distinct fire polygon consisting of coordinate points.
+        """
+        json_data = fetch_json_from_blob("fire.json")
+        if not json_data:
+            return pd.DataFrame()
+
+        processed_data = []
+        
+        # Enumerate through the outer list to assign a unique ID to each distinct fire polygon
+        for fire_id, polygon_points in enumerate(json_data):
+            for point in polygon_points:
+                entry = {
+                    'fire_id': fire_id,  # Keeps distinct fire perimeters separate
+                    'lat': point.get('lat'),
+                    'lon': point.get('lon')
+                }
+                processed_data.append(entry)
+
+        return pd.DataFrame(processed_data)

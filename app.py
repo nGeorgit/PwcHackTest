@@ -41,11 +41,16 @@ if "dataframe_key" not in st.session_state:
 # 3. DATA LOADING & PROCESSING
 # -----------------------------------------------------------------------------
 @st.cache_data
-def get_data():
+def get_citizen_data():
     # return DataManager.load_data_from_local_json('dummy_data/dataset_250_final.json')
     return DataManager.load_citizen_data_from_blob()
 
-raw_data = get_data()
+@st.cache_data
+def get_fire_data():
+    return DataManager.load_fire_data_from_blob()
+
+raw_data = get_citizen_data()
+fire_data = get_fire_data()
 # Pass None for fire sim coords as they are disabled
 processed_data = apply_ranking_logic(raw_data)
 # Sorting is already handled in apply_ranking_logic
@@ -94,6 +99,7 @@ with col_map:
     # Render Map and capture click events
     map_data = render_map(
         processed_data,
+        fire_df=fire_data,
         center_coords=st.session_state.map_center,
         zoom=st.session_state.zoom,
         selected_id=st.session_state.selected_citizen_id
