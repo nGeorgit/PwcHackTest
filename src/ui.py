@@ -190,7 +190,6 @@ def render_map(processed_data, fire_df, center_coords=None, zoom=10, selected_id
         popup_html = f"""
         <b>ID:</b> {row['id']}<br>
         <b>Name:</b> {fullname}<br>
-        <b>Urgency:</b> {int(row['urgency_score'])}<br>
         <b>Life Support:</b> {life_support}<br>
         <b>Notes:</b> {notes}
         """
@@ -228,7 +227,7 @@ def render_citizen_list(full_data, selected_id=None, widget_key="citizen_list"):
         selected_row = full_data[full_data['id'] == selected_id]
         if not selected_row.empty:
             row = selected_row.iloc[0]
-            st.info(f"🎯 **Selected:** {row.get('fullname', row['id'])} | Urgency: {int(row['urgency_score'])}")
+            st.info(f"🎯 **Selected:** {row.get('fullname', row['id'])}")
 
     # --- FILTERING LOGIC START ---
     # Create a new dataframe for the list view that excludes non-present citizens

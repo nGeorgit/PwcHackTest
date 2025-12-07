@@ -48,6 +48,7 @@ class AIAssistant:
         Args:
             prompt: User input string.
             context_data: Dictionary containing real-time context.
+            chat_history: Optional list of previous chat messages.
         """
 
         # 1. Check Configuration
@@ -118,6 +119,7 @@ SAFETY RULES
 • Do not give medical advice beyond basic first-aid and safety actions.
 • Do not hallucinate data.
 • If unsure, ask for clarification.
+do not give Απόσταση από τη φωτιά if not present in the data.
 
 ---------------------------
 RESPONSE FORMAT
@@ -141,7 +143,7 @@ INSTRUCTIONS ON MISSING DATA:
         #     {"role": "user", "content": prompt}
         # ]
         
-        messages = [{"role": "system", "content": system_message}]
+        messages = [{"role": "system", "content": system_message},]
         
         if chat_history:
             messages.extend(chat_history)

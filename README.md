@@ -23,36 +23,12 @@
   * **Communications**: Infobip SMS API
   * **Logic**: Custom ranking algorithms & Azure Functions integration
 
-## 📂 Project Structure
-
-```text
-.
-├── app.py                  # Main application entry point
-├── startup.sh              # Shell script to launch the app
-├── requirements.txt        # Python dependencies
-├── .gitignore              # Git ignore rules
-├── LICENSE.txt             # MIT License
-├── src/
-│   ├── ai.py               # Azure OpenAI integration logic
-│   ├── speech.py           # Azure Speech (STT/TTS) logic
-│   ├── sms.py              # Infobip SMS sending function
-│   ├── logic.py            # Urgency scoring and ranking algorithms
-│   ├── data.py             # Data loading (Local & Azure Blob)
-│   ├── ui.py               # UI components (Sidebar, Map, Chat)
-│   ├── config.py           # Configuration & Environment variables
-│   └── blod_util.py        # Azure Blob Storage utilities
-├── tests/
-│   ├── test_ai.py          # Unit tests for AI module
-│   └── test_logic.py       # Unit tests for scoring logic
-└── dummy_data/
-    └── dataset_250_finalDEL.json # Sample citizen dataset
-```
 
 ## ⚙️ Setup & Installation
 
 ### Prerequisites
 
-  * Python 3.9+
+  * Python 3.12+
   * Azure Cloud Account (for OpenAI, Speech, Blob Storage)
   * Infobip Account (for SMS)
 
@@ -113,11 +89,6 @@ You can run the application directly using Streamlit:
 streamlit run app.py
 ```
 
-Or use the provided startup script:
-
-```bash
-bash startup.sh
-```
 
 The application will launch on `http://localhost:8501` (or the port specified in the script).
 

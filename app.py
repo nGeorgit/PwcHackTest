@@ -93,7 +93,7 @@ def process_message(user_text):
     }
 
     # 3. Get AI Response
-    response_text = AIAssistant.get_response(user_text, context_data)
+    response_text = AIAssistant.get_response(user_text, context_data, st.session_state.messages)
     
     # 4. Append Assistant Message
     st.session_state.messages.append({"role": "assistant", "content": response_text})
