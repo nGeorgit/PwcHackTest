@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from src.blod_util import fetch_json_from_blob
 import json
 
 class DataManager:
@@ -30,7 +31,7 @@ class DataManager:
         return pd.DataFrame(data)
 
     @staticmethod
-    def load_data_from_json(filepath):
+    def load_data_from_local_json(filepath):
         """
         Loads data from a specific JSON file structure.
         Expected fields: id, fullname, coordinates(lat, lon), gender, life_support,
@@ -53,3 +54,23 @@ class DataManager:
         except Exception as e:
             print(f"Error loading JSON data: {e}")
             return pd.DataFrame()
+        
+    @staticmethod
+    def load_citizen_data_from_blob():
+        """
+        Loads citizen data JSON from Azure Blob Storage.
+        """
+        json_data = fetch_json_from_blob("dataset_250_final.json")
+        if not json_data:
+            return pd.DataFrame()
+
+        # Flatten coordinates
+        processed_data = []
+        for item in json_data:
+            entry = item.copy()
+            coords = entry.pop('coordinates', {})
+            entry['lat'] = coords.get('lat')
+            entry['lon'] = coords.get('lon')
+            processed_data.append(entry)
+
+        return pd.DataFrame(processed_data)
