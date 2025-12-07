@@ -11,6 +11,8 @@ def render_chat_interface(messages, on_voice_input=None):
     """
     st.sidebar.subheader("🤖 AI Mission Support")
 
+  
+        
     # 1. Initialize draft state
     if "voice_draft" not in st.session_state:
         st.session_state.voice_draft = None
@@ -69,7 +71,8 @@ def render_chat_interface(messages, on_voice_input=None):
                 st.session_state.voice_draft = None
                 
             st.rerun()
-
+    if "last_audio" in st.session_state and st.session_state.last_audio:
+            st.sidebar.audio(st.session_state.last_audio, format="audio/wav")
     return st.sidebar.chat_input("Ask about the situation...")
 
 def render_sidebar(messages, on_voice_input=None):

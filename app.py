@@ -1,5 +1,6 @@
 import streamlit as st
 from src.config import PAGE_CONFIG, CUSTOM_CSS
+from src.speech import recognize_speech, text_to_speech
 from src.data import DataManager
 from src.logic import apply_ranking_logic
 from src.ui import render_sidebar, render_header, render_map, render_citizen_list
@@ -93,6 +94,19 @@ def process_message(user_text):
     
     # 4. Append Assistant Message
     st.session_state.messages.append({"role": "assistant", "content": response_text})
+    
+    # # 2. Get AI Response
+    # response_text = AIAssistant.get_response(user_text, context_data)
+    # st.session_state.messages.append({"role": "assistant", "content": response_text})
+
+    # 3. --- NEW: Generate Audio ---
+    audio_bytes = text_to_speech(response_text)
+    if audio_bytes:
+        # Store it in session state to play it
+        st.session_state.last_audio = audio_bytes
+        # Optional: Auto-play flag (browsers might block strictly auto-playing audio)
+        st.session_state.audio_key = str(len(st.session_state.messages)) # unique key forces reload
+
 
 # 1. Render the Sidebar
 # This function now handles the UI, the Voice Input, AND returns the Text Input.
