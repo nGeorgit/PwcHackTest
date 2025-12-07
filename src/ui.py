@@ -1,6 +1,7 @@
 import folium
 from streamlit_folium import st_folium
 from src.speech import recognize_speech
+from src.config import DEFAULT_LAT, DEFAULT_LON
 import pandas as pd
 import streamlit as st
 
@@ -93,7 +94,7 @@ def render_header():
     with col_head2:
         st.metric(label="System Status", value="ACTIVE", delta="CRITICAL ALERT")
 
-def render_map(processed_data, fire_df, center_coords=None, zoom=14, selected_id=None):
+def render_map(processed_data, fire_df, center_coords=None, zoom=10, selected_id=None):
     """
     Renders the Folium map.
 
@@ -110,7 +111,7 @@ def render_map(processed_data, fire_df, center_coords=None, zoom=14, selected_id
 
     # Initialize Map
     if center_coords is None:
-        center_coords = [38.049498421610664, 23.98779210235504]
+        center_coords = [DEFAULT_LAT, DEFAULT_LON]
 
     m = folium.Map(location=center_coords, zoom_start=zoom)
 

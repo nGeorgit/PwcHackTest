@@ -1,5 +1,5 @@
 import streamlit as st
-from src.config import PAGE_CONFIG, CUSTOM_CSS
+from src.config import PAGE_CONFIG, CUSTOM_CSS, DEFAULT_LAT, DEFAULT_LON
 from src.speech import recognize_speech, text_to_speech
 from src.data import DataManager
 from src.logic import apply_ranking_logic
@@ -24,10 +24,10 @@ if "messages" not in st.session_state:
     })
 
 if "map_center" not in st.session_state:
-    st.session_state.map_center = [38.049498421610664, 23.98779210235504]
+    st.session_state.map_center = [DEFAULT_LAT, DEFAULT_LON]
 
 if "zoom" not in st.session_state:
-    st.session_state.zoom = 14
+    st.session_state.zoom = 12.5
 
 if "selected_citizen_id" not in st.session_state:
     st.session_state.selected_citizen_id = None
