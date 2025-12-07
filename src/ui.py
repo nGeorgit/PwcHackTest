@@ -1,6 +1,7 @@
 import folium
 from streamlit_folium import st_folium
 from src.speech import recognize_speech
+from src.sms import send_infobip_sms
 from src.config import DEFAULT_LAT, DEFAULT_LON
 import pandas as pd
 import streamlit as st
@@ -86,14 +87,35 @@ def render_sidebar(messages, on_voice_input=None):
 
 
 def render_header():
-    """Renders the main header."""
+    """Renders the main header with an SOS action."""
     col_head1, col_head2 = st.columns([3, 1])
+    
     with col_head1:
         st.title("🛡️ Aegis: Intelligent Rescue Response")
         st.markdown("Real-time prioritization of vulnerable populations during crisis.")
+    
     with col_head2:
         st.metric(label="System Status", value="ACTIVE", delta="CRITICAL ALERT")
-
+        
+        # --- SOS BUTTON ADDED HERE ---
+        # Using type="primary" to make it stand out visually
+        if st.button("Sent SOS SMS", type="primary", use_container_width=True):
+            # 1. Δείχνουμε ότι κάτι συμβαίνει (UX)
+            with st.spinner("Contacting Infobip API..."):
+                result = None
+                # 2. Καλούμε τη συνάρτηση
+                # result = send_infobip_sms(
+                #     recipients=[{'to': '306943428465'}, {'to': '4915202042012'}],#, {'to':'306980800178'}],  # nikos 306943428465, theodora 4915202042012, veroniki 306980800178
+                #     message_text="🆘 SOS ALERT! Critical situation reported via PwC Hackathon App. 📍 Check dashboard."
+                # )
+            
+            # 3. Ελέγχουμε το αποτέλεσμα και ενημερώνουμε το UI
+            if result:
+                st.toast("🚨 SOS SMS has been broadcasted!", icon="⚠️")
+                st.success("Message sent successfully!") # Προαιρετικό, μένει στην οθόνη
+            else:
+                st.error("Failed to send SMS. Check console/logs.")
+            
 def render_map(processed_data, fire_df, center_coords=None, zoom=10, selected_id=None):
     """
     Renders the Folium map.

@@ -34,6 +34,10 @@ STORAGE_CONN_STRING = os.getenv("STORAGE_CONN_STRING")
 SPEECH_KEY = os.getenv("SPEECH_KEY")
 SPEECH_REGION = os.getenv("SPEECH_REGION")
 
+# Infobip SMS Configuration
+INFOBIP_API_KEY = os.getenv("INFOBIP_API_KEY")
+INFOBIP_BASE_URL = os.getenv("INFOBIP_BASE_URL")
+
 # Custom CSS
 CUSTOM_CSS = """
 <style>
