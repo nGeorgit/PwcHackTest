@@ -104,10 +104,10 @@ def render_header():
             with st.spinner("Contacting Infobip API..."):
                 result = None
                 # 2. Καλούμε τη συνάρτηση
-                # result = send_infobip_sms(
-                #     recipients=[{'to': '306943428465'}, {'to': '4915202042012'}],#, {'to':'306980800178'}],  # nikos 306943428465, theodora 4915202042012, veroniki 306980800178
-                #     message_text="🆘 SOS ALERT! Critical situation reported via PwC Hackathon App. 📍 Check dashboard."
-                # )
+                result = send_infobip_sms(
+                    recipients=[{'to': '306943428465'}, {'to': '4915202042012'}],#, {'to':'306980800178'}],  # nikos 306943428465, theodora 4915202042012, veroniki 306980800178
+                    message_text="🆘 SOS ALERT! Critical situation reported via PwC Hackathon App. 📍 Check dashboard."
+                )
             
             # 3. Ελέγχουμε το αποτέλεσμα και ενημερώνουμε το UI
             if result:

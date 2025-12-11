@@ -69,6 +69,7 @@ class DataManager:
         for item in json_data:
             entry = item.copy()
             coords = entry.pop('coordinates', {})
+            #entry.remove('urgency_score')
             entry['lat'] = coords.get('lat')
             entry['lon'] = coords.get('lon')
             processed_data.append(entry)
