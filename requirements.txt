@@ -10,3 +10,5 @@ requests
 azure-storage-blob==12.27.1
 azure-cognitiveservices-speech==1.47.0
 azure-core==1.36.0
+streamlit-mic-recorder
+pydub
