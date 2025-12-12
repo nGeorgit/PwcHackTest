@@ -7,7 +7,7 @@ load_dotenv()
 # Page Configuration
 PAGE_CONFIG = {
     "layout": "wide",
-    "page_title": "RescuerAI - Emergency Command",
+    "page_title": "AIgis - Emergency Command",
     "page_icon": "🚑"
 }
 
