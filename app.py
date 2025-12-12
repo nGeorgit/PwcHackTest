@@ -1,6 +1,6 @@
 import streamlit as st
 from src.config import PAGE_CONFIG, CUSTOM_CSS, DEFAULT_LAT, DEFAULT_LON
-from src.speech import recognize_speech, text_to_speech
+from src.speech import text_to_speech
 from src.data import DataManager
 from src.logic import apply_ranking_logic
 from src.ui import render_sidebar, render_header, render_map, render_citizen_list

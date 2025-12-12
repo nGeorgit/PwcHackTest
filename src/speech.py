@@ -3,37 +3,38 @@ import streamlit as st
 from src.config import SPEECH_KEY, SPEECH_REGION
 import re
 
-def recognize_speech():
+def recognize_speech_from_file(audio_file_path):
     """
-    Uses Azure Speech SDK to listen to the default microphone and transcribe text.
-    Returns:
-        str: The transcribed text or None if failed.
+    Reads audio from a FILE (not the mic) and sends it to Azure.
     """
     try:
-        print(f"DEBUG: Key='{SPEECH_KEY}', Region='{SPEECH_REGION}'")
-# speech_config = speechsdk.SpeechConfig(...)
-        speech_config = speechsdk.SpeechConfig(subscription=SPEECH_KEY, region=SPEECH_REGION,speech_recognition_language="el-GR")
-        speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
+        speech_config = speechsdk.SpeechConfig(
+            subscription=SPEECH_KEY, 
+            region=SPEECH_REGION, 
+            speech_recognition_language="el-GR"
+        )
         
-        # Display a status indicator
-        with st.sidebar.status("Listening...", expanded=True) as status:
-            st.write("Speak into your microphone now.")
-            result = speech_recognizer.recognize_once_async().get()
+        # CRITICAL FIX: This tells Azure to listen to the FILE, not the hardware mic
+        audio_config = speechsdk.audio.AudioConfig(filename=audio_file_path)
+        
+        speech_recognizer = speechsdk.SpeechRecognizer(
+            speech_config=speech_config, 
+            audio_config=audio_config  # <--- MUST BE INCLUDED
+        )
+        
+        result = speech_recognizer.recognize_once_async().get()
+        
+        if result.reason == speechsdk.ResultReason.RecognizedSpeech:
+            return result.text
+        elif result.reason == speechsdk.ResultReason.NoMatch:
+            st.sidebar.error("No speech recognized.")
+            return None
+        elif result.reason == speechsdk.ResultReason.Canceled:
+            st.sidebar.error(f"Azure Error: {result.cancellation_details.reason}")
+            return None
             
-            if result.reason == speechsdk.ResultReason.RecognizedSpeech:
-                status.update(label="Audio captured!", state="complete")
-                return result.text
-            elif result.reason == speechsdk.ResultReason.NoMatch:
-                status.update(label="No speech recognized", state="error")
-                return None
-            elif result.reason == speechsdk.ResultReason.Canceled:
-                cancellation_details = result.cancellation_details
-                status.update(label=f"Error: {cancellation_details.reason}", state="error")
-                return None
-                
     except Exception as e:
-        print(f"Azure Speech Error: {e}")
-        st.error(f"Azure Speech Error: {e}")
+        st.error(f"Error: {e}")
         return None
     
 def detect_language_voice(text):

@@ -1,6 +1,10 @@
 import folium
 from streamlit_folium import st_folium
-from src.speech import recognize_speech
+import os
+import io
+from pydub import AudioSegment
+from streamlit_mic_recorder import mic_recorder
+from src.speech import recognize_speech_from_file
 from src.sms import send_infobip_sms
 from src.config import DEFAULT_LAT, DEFAULT_LON
 import pandas as pd
@@ -27,14 +31,45 @@ def render_chat_interface(messages, on_voice_input=None):
 
     # 3. Voice Input Logic
     
-    # CASE A: No draft -> Show Start Button
     if st.session_state.voice_draft is None:
-        if st.sidebar.button("Start Voice Input"):
-            voice_input = recognize_speech()
+        with st.sidebar:
+            st.header("Operation Controls")
+            
+            c1, c2 = st.columns([1, 4]) 
+            with c1:
+                audio_data = mic_recorder(
+                    start_prompt="🎤",
+                    stop_prompt="🛑",
+                    just_once=True,
+                    key='sidebar_recorder'
+                )
+            with c2:
+                st.write("Push to speak")
+
+        if audio_data:
+            # --- NEW CONVERSION LOGIC START ---
+            # 1. Load the raw browser audio (likely WebM)
+            audio_segment = AudioSegment.from_file(io.BytesIO(audio_data['bytes']))
+            
+            # 2. Convert to Azure-friendly format: 16000Hz, Mono, 16-bit
+            audio_segment = audio_segment.set_frame_rate(16000).set_channels(1).set_sample_width(2)
+            
+            # 3. Export as a proper WAV file
+            temp_filename = "temp_input.wav"
+            audio_segment.export(temp_filename, format="wav")
+            # --- NEW CONVERSION LOGIC END ---
+
+            # Process the clean WAV file
+            with st.sidebar.status("Analyzing voice command...", expanded=True):
+                voice_input = recognize_speech_from_file(temp_filename)
+            
+            # Cleanup
+            if os.path.exists(temp_filename):
+                os.remove(temp_filename)
+
             if voice_input:
                 st.session_state.voice_draft = voice_input
                 st.rerun()
-
     # CASE B: Draft exists -> Show Review Controls
     else:
         # Create a PLACEHOLDER. This is the magic box we can empty later.
@@ -63,7 +98,7 @@ def render_chat_interface(messages, on_voice_input=None):
             
             # 2. NOW listen. The 'Review' box is gone, so the 'Listening' status 
             #    (from speech.py) will appear clearly, just like the first time.
-            new_voice_input = recognize_speech()
+            new_voice_input = None#recognize_speech()
             
             # 3. Update the draft with the new attempt
             if new_voice_input:
