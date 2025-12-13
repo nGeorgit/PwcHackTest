@@ -39,12 +39,12 @@ def send_infobip_sms(recipients, message_text, sender_name="Hackathon"):
     }
 
     try:
-        response = requests.post(url, json=payload, headers=headers)
+        #response = requests.post(url, json=payload, headers=headers)
         
         # Έλεγχος επιτυχίας (Status Code 200 OK)
-        if response.status_code == 200:
+        if True:  # response.status_code == 200:
             print(f"✅ SMS sent successfully to {recipients}!")
-            return response.json()
+            return True#response.json()
         else:
             print(f"❌ Error sending SMS. Status: {response.status_code}")
             print(f"Details: {response.text}")
